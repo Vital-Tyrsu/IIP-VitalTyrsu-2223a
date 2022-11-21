@@ -10,13 +10,11 @@ namespace ConsoleGedicht
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("jij brengt de zon");
+            Console.WriteLine("Jantje zag eens pruimen hangen,");
             Console.ReadKey();
-            Console.WriteLine("jij brengt licht in mijn leven");
+            Console.WriteLine("O! als eieren zo groot.");
             Console.ReadKey();
-            Console.WriteLine("ik houd zo veel van jou");
-            Console.ReadKey();
-            Console.WriteLine("en ik zou mijn liefde aan je willen geven");
+            Console.WriteLine("'t Scheen, dat Jantje wou gaan plukken,");
             Console.ReadKey();
         }
     }
