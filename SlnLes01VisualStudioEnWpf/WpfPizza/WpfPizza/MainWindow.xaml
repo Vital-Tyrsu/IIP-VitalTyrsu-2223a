@@ -1,0 +1,19 @@
+﻿<Window x:Class="WpfPizza.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfPizza"
+        mc:Ignorable="d"
+        Title="02.wpf.Pizza" Height="250" Width="800">
+    <Grid Background="#FFE2F0BB">
+        <Label Content="BESTEL JE PIZZA" HorizontalAlignment="Left" Margin="49,28,0,0" VerticalAlignment="Top" Height="41" Width="175" FontSize="18"/>
+        <TextBlock x:Name="txtBeschrijving" HorizontalAlignment="Left" Margin="189,69,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="39" Width="497"/>
+        <RadioButton x:Name="rdbHotSpicy" Content="hot &amp; spicy" GroupName="pizzaSoort" HorizontalAlignment="Left" Margin="49,154,0,0" VerticalAlignment="Top" Checked="rdbHotSpicy_Checked"/>
+        <RadioButton x:Name="rdbVierSeizoenen" Content="4 seizoenen" GroupName="pizzaSoort" HorizontalAlignment="Left" Margin="48,117,0,0" VerticalAlignment="Top" Checked="rdbVierSeizoenen_Checked"/>
+        <RadioButton x:Name="rdbHawai" Content="hawai" GroupName="pizzaSoort" HorizontalAlignment="Left" Margin="49,191,0,0" VerticalAlignment="Top" Checked="rdbHawai_Checked"/>
+        <Image x:Name="imgPhoto" HorizontalAlignment="Left" Height="111" Margin="470,113,0,0" VerticalAlignment="Top" Width="122"/>
+
+
+    </Grid>
+</Window>
