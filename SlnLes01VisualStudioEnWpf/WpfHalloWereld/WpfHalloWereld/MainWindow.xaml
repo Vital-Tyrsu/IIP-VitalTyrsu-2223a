@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfHalloWereld"
         mc:Ignorable="d"
-        Title="MainWindow" Height="315" Width="800">
+        Title="Opgave 02.wpf.A" Height="315" Width="800">
     <Grid Background="#FFE5E8CE">
         <Label x:Name="lblHallo" Content="Hallo, hoe is je naam?" HorizontalAlignment="Left" Margin="117,85,0,0" VerticalAlignment="Top" Height="35" Width="137" />
         <TextBox x:Name="txtHallo" Margin="117,120,0,0" Padding="10px" TextWrapping="Wrap" Width="283" Height="41" HorizontalAlignment="Left" VerticalAlignment="Top"/>
