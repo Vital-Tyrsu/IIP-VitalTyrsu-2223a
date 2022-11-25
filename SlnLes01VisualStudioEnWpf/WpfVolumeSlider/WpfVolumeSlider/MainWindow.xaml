@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfVolumeSlider"
         mc:Ignorable="d"
-        Title="MainWindow" Height="200" Width="800" Background="#FF79D2E5">
+        Title="Volume Slider" Height="200" Width="800" Background="#FF79D2E5">
     <Grid>
         <Label x:Name="lblVolume" HorizontalAlignment="Left" Height="30" Margin="308,130,0,0" VerticalAlignment="Top" Width="136"/>
         <Slider x:Name="sld1" HorizontalAlignment="Left" Margin="151,0,0,0" VerticalAlignment="Center" Width="533" Maximum="100" Minimum="0" IsSnapToTickEnabled="True" TickFrequency="5" ValueChanged="sld1_ValueChanged"/>

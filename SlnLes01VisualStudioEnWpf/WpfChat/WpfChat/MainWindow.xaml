@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfChat"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="WpfChat" Height="450" Width="800">
     <Grid Background="#FFB9EAF7">
         <Label x:Name="lblName" Content="Naam:" HorizontalAlignment="Left" Margin="41,99,0,0" VerticalAlignment="Top"/>
         <Label x:Name="lblBericht" Content="Bericht:" HorizontalAlignment="Left" Margin="41,177,0,0" VerticalAlignment="Top"/>
