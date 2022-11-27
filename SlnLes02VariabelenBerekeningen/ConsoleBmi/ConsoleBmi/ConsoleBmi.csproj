@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{DA4F4D20-CB8C-4407-9EAD-C6CB32B7899B}</ProjectGuid>
+    <ProjectGuid>{CDE76E61-9D2C-40EC-AB10-751CE184950C}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>ConsoleGedicht</RootNamespace>
-    <AssemblyName>ConsoleGedicht</AssemblyName>
+    <RootNamespace>ConsoleBmi</RootNamespace>
+    <AssemblyName>ConsoleBmi</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -48,8 +48,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
-    <None Include="packages.config" />
-    <None Include="Settings.StyleCop" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
