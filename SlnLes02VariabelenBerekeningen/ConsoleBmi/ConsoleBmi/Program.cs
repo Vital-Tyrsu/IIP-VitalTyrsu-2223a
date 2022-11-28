@@ -10,22 +10,19 @@ namespace ConsoleBmi
     {
         static void Main(string[] args)
         {
-
-            Console.WriteLine("BMI CALCULATOR");
-            Console.WriteLine("==============");
-
+            Console.WriteLine("@BMI CALCULATOR\n===============");
             Console.Write("Lengte (in cm): ");
-            double lengte = Convert.ToInt32(Console.ReadLine());
-            lengte = lengte / 100;
+            int lengte = Convert.ToInt32(Console.ReadLine());
+
             Console.Write("Gewicht (in kg): ");
             int gewicht = Convert.ToInt32(Console.ReadLine());
 
-            double totaal = Math.Round(Convert.ToDouble(gewicht) / (lengte * lengte), 2);
+            double lengteInMeter = (double)lengte / 100;
 
-            Console.Write("Je BMI bedraagt: " + totaal);
+            double bmi = (double)gewicht / Math.Pow(lengteInMeter , 2);
 
+            Console.WriteLine($"Je BMI bedraagt:{bmi.ToString("0.0")} ");
             Console.ReadLine();
-
         }
     }
 }
