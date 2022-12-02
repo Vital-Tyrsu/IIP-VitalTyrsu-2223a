@@ -22,8 +22,9 @@ Alles is à volonté en dranken zijn inbegrepen!
             const double DESSERTENBUFFET = 7.95;
             const double KINDERMENU = 8.95;
 
-            Console.WriteLine($"Aantal seizoensbuffets ({euro}18.5):");
-            
+            Console.Write($"Aantal seizoensbuffets ({euro}18.5):");
+            Console.Write($"Aantal dessertenbuffets ({euro}7.95):");
+
             Console.WriteLine("Fooi (0 indien geen): ");
             
 

@@ -14,6 +14,16 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBuffet", "ConsoleBuffet\ConsoleBuffet.csproj", "{80B3B218-7A86-46ED-AC2E-01B29F4292A6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAlcohol", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfAlcohol\WpfAlcohol\WpfAlcohol.csproj", "{1046C4E5-DE48-4B34-986B-B51FF56F6F47}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalculator", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfCalculator\WpfCalculator\WpfCalculator.csproj", "{DC1634CB-2BF4-4609-921F-F28349F5A6D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfInterest", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfInterest\WpfInterest\WpfInterest.csproj", "{FC0AD0EF-1C87-4295-9B27-A25106DDFE13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWinkel", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfWinkel\WpfWinkel\WpfWinkel.csproj", "{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWinkel (2)", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfWinkel\WpfWinkel\WpfWinkel (2).csproj", "{32AE28CE-B40B-4B09-88EE-6A3E15AD1403}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +42,26 @@ Global
 		{80B3B218-7A86-46ED-AC2E-01B29F4292A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B3B218-7A86-46ED-AC2E-01B29F4292A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{80B3B218-7A86-46ED-AC2E-01B29F4292A6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1046C4E5-DE48-4B34-986B-B51FF56F6F47}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1046C4E5-DE48-4B34-986B-B51FF56F6F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1046C4E5-DE48-4B34-986B-B51FF56F6F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1046C4E5-DE48-4B34-986B-B51FF56F6F47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DC1634CB-2BF4-4609-921F-F28349F5A6D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DC1634CB-2BF4-4609-921F-F28349F5A6D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DC1634CB-2BF4-4609-921F-F28349F5A6D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DC1634CB-2BF4-4609-921F-F28349F5A6D2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FC0AD0EF-1C87-4295-9B27-A25106DDFE13}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC0AD0EF-1C87-4295-9B27-A25106DDFE13}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC0AD0EF-1C87-4295-9B27-A25106DDFE13}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC0AD0EF-1C87-4295-9B27-A25106DDFE13}.Release|Any CPU.Build.0 = Release|Any CPU
+		{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{32AE28CE-B40B-4B09-88EE-6A3E15AD1403}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{32AE28CE-B40B-4B09-88EE-6A3E15AD1403}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{32AE28CE-B40B-4B09-88EE-6A3E15AD1403}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{32AE28CE-B40B-4B09-88EE-6A3E15AD1403}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
