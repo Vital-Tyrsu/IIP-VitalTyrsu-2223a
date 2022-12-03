@@ -44,28 +44,29 @@ Alles is à volonté en dranken zijn inbegrepen!
             Console.WriteLine("Cash betaald:");
             int prijsBetaald= Convert.ToInt32(Console.ReadLine());
             Console.WriteLine("U krijgt terug: ");
-            double prijsTotaal = (prijsAfgerond - prijsBetaald);
+            int prijsTotaal = Convert.ToInt32(prijsAfgerond - prijsBetaald);
 
 
-            prijsTotaal = prijsTotaal / 50;
+            int prijsVoor50 = prijsTotaal / 50;
             prijsTotaal = prijsTotaal % 50;
-            Console.WriteLine($"- {prijsTotaal} briefje(s) van 50");
+            Console.WriteLine($"- {prijsVoor50} briefje(s) van 50");
 
-            prijsTotaal = prijsTotaal / 20;
+            int prijsVoor20 = prijsVoor50 / 20;
             prijsTotaal = prijsTotaal % 20;
-            Console.WriteLine($"- {prijsTotaal} briefje(s) van 20");
-            
+            Console.WriteLine($"- {prijsVoor20} briefje(s) van 20");
 
-            Console.WriteLine($"- {prijsTotaal} briefje(s) van 10");
-            
+            int prijsVoor10 = prijsVoor20 / 10;
+            prijsTotaal = prijsTotaal % 10;
+            Console.WriteLine($"- {prijsVoor10} briefje(s) van 10");
 
-            Console.WriteLine($"- {prijsTotaal} briefje(s) van 5");
-            
+            int prijsVoor5 = prijsVoor10 / 5;
+            Console.WriteLine($"- {prijsVoor5} briefje(s) van 5");
 
-            Console.WriteLine($"- {prijsTotaal} stuk(ken) van 2");
-            
+            int prijsVoor2 = prijsVoor5 / 2;
+            Console.WriteLine($"- {prijsVoor2} stuk(ken) van 2");
 
-            Console.WriteLine($"- {prijsTotaal} stuk(ken) van 1");
+            int prijsVoor1 = prijsVoor2 / 1;
+            Console.WriteLine($"- {prijsVoor1} stuk(ken) van 1");
             
 
 
