@@ -3,7 +3,30 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleRaden", "ConsoleRaden\ConsoleRaden.csproj", "{AB8DB451-C6A2-4027-8495-34747663E18A}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{797F3A3D-93B2-4F30-A5C3-340FF461DEB8}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig.inferred = .editorconfig.inferred
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSliderKleur", "WpfSliderKleur\WpfSliderKleur.csproj", "{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{AB8DB451-C6A2-4027-8495-34747663E18A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AB8DB451-C6A2-4027-8495-34747663E18A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AB8DB451-C6A2-4027-8495-34747663E18A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AB8DB451-C6A2-4027-8495-34747663E18A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
