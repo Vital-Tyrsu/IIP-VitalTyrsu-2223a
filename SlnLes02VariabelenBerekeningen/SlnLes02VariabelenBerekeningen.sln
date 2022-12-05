@@ -3,12 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBmi", "ConsoleBmi\ConsoleBmi\ConsoleBmi.csproj", "{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSeconden", "ConsoleBmi\ConsoleSeconden\ConsoleSeconden.csproj", "{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}"
-EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D36E8260-4C68-4E41-AD48-3E5E04D31C15}"
 	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
 		.editorconfig.inferred = .editorconfig.inferred
 	EndProjectSection
 EndProject
@@ -16,13 +13,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBuffet", "ConsoleBuf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfAlcohol", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfAlcohol\WpfAlcohol\WpfAlcohol.csproj", "{1046C4E5-DE48-4B34-986B-B51FF56F6F47}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalculator", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfCalculator\WpfCalculator\WpfCalculator.csproj", "{DC1634CB-2BF4-4609-921F-F28349F5A6D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBmi", "ConsoleBmi\ConsoleBmi.csproj", "{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfInterest", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfInterest\WpfInterest\WpfInterest.csproj", "{FC0AD0EF-1C87-4295-9B27-A25106DDFE13}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleSeconden", "ConsoleSeconden\ConsoleSeconden.csproj", "{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWinkel", "..\..\IIP-VitalTyrsu-2122\02.IIP-variabelen en berekeningen\WpfWinkel\WpfWinkel\WpfWinkel.csproj", "{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfBMI", "WpfBMI\WpfBMI.csproj", "{3136AAE7-691C-43FA-8FD4-33731740BAE6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfBmi", "djflkqjdfgoiqnrgoin\WpfBmi.csproj", "{49E72112-0582-4CC5-B421-F896D0F297B9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCalculator", "WpfCalculator\WpfCalculator.csproj", "{DC1634CB-2BF4-4609-921F-F28349F5A6D2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfInterest", "WpfInterest\WpfInterest.csproj", "{FC0AD0EF-1C87-4295-9B27-A25106DDFE13}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfWinkel", "WpfWinkel\WpfWinkel.csproj", "{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -30,14 +31,6 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}.Release|Any CPU.Build.0 = Release|Any CPU
 		{80B3B218-7A86-46ED-AC2E-01B29F4292A6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{80B3B218-7A86-46ED-AC2E-01B29F4292A6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{80B3B218-7A86-46ED-AC2E-01B29F4292A6}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -46,6 +39,18 @@ Global
 		{1046C4E5-DE48-4B34-986B-B51FF56F6F47}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1046C4E5-DE48-4B34-986B-B51FF56F6F47}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1046C4E5-DE48-4B34-986B-B51FF56F6F47}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93DDCB7E-D06B-453B-B2CB-82EBBAFAC2B2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BA0E4E69-A8C3-4456-9281-EDE6A2B9E3EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3136AAE7-691C-43FA-8FD4-33731740BAE6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3136AAE7-691C-43FA-8FD4-33731740BAE6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3136AAE7-691C-43FA-8FD4-33731740BAE6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3136AAE7-691C-43FA-8FD4-33731740BAE6}.Release|Any CPU.Build.0 = Release|Any CPU
 		{DC1634CB-2BF4-4609-921F-F28349F5A6D2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{DC1634CB-2BF4-4609-921F-F28349F5A6D2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{DC1634CB-2BF4-4609-921F-F28349F5A6D2}.Release|Any CPU.ActiveCfg = Release|Any CPU
@@ -58,10 +63,6 @@ Global
 		{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{833EC1D6-7AD5-48E7-9210-B6A2F23345B2}.Release|Any CPU.Build.0 = Release|Any CPU
-		{49E72112-0582-4CC5-B421-F896D0F297B9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{49E72112-0582-4CC5-B421-F896D0F297B9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{49E72112-0582-4CC5-B421-F896D0F297B9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{49E72112-0582-4CC5-B421-F896D0F297B9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

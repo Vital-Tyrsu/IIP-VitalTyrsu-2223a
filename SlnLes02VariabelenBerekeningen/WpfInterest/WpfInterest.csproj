@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{3136AAE7-691C-43FA-8FD4-33731740BAE6}</ProjectGuid>
+    <ProjectGuid>{FC0AD0EF-1C87-4295-9B27-A25106DDFE13}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>WpfBMI</RootNamespace>
-    <AssemblyName>WpfBMI</AssemblyName>
+    <RootNamespace>WpfInterest</RootNamespace>
+    <AssemblyName>WpfInterest</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
