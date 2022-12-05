@@ -12,6 +12,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSliderKleur", "WpfSliderKleur\WpfSliderKleur.csproj", "{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBestelling", "ConsoleBestelling\ConsoleBestelling.csproj", "{B7304390-7D2A-498C-B747-30D690A631FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEindcijfer", "ConsoleEindcijfer\ConsoleEindcijfer.csproj", "{CA6E9C46-16A7-4DD2-BEE3-7AA7C5D0CB2D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -26,6 +30,14 @@ Global
 		{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E1C982DF-0FDF-46F9-9DC8-9EB8508BC524}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B7304390-7D2A-498C-B747-30D690A631FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B7304390-7D2A-498C-B747-30D690A631FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B7304390-7D2A-498C-B747-30D690A631FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B7304390-7D2A-498C-B747-30D690A631FB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CA6E9C46-16A7-4DD2-BEE3-7AA7C5D0CB2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CA6E9C46-16A7-4DD2-BEE3-7AA7C5D0CB2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CA6E9C46-16A7-4DD2-BEE3-7AA7C5D0CB2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CA6E9C46-16A7-4DD2-BEE3-7AA7C5D0CB2D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
