@@ -18,6 +18,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleEindcijfer", "Consol
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfRaden", "WpfRaden\WpfRaden.csproj", "{1EAEE836-02F4-47E5-9F89-568558BEA672}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfBieden", "WpfBieden\WpfBieden.csproj", "{7E35C079-CE28-4368-B8B0-F88A4CB1832C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -44,6 +46,10 @@ Global
 		{1EAEE836-02F4-47E5-9F89-568558BEA672}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1EAEE836-02F4-47E5-9F89-568558BEA672}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1EAEE836-02F4-47E5-9F89-568558BEA672}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7E35C079-CE28-4368-B8B0-F88A4CB1832C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7E35C079-CE28-4368-B8B0-F88A4CB1832C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7E35C079-CE28-4368-B8B0-F88A4CB1832C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7E35C079-CE28-4368-B8B0-F88A4CB1832C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
