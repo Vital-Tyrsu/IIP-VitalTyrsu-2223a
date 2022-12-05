@@ -23,6 +23,13 @@ namespace ConsoleEindcijfer
             double examenCijfer = Convert.ToDouble(Console.ReadLine());
 
             double eindCijfer = Math.Round((dagelijksWerkCijfer * 0.3) + (projectCijfer * 0.2) + (examenCijfer * 0.5), 1) * 5;
+
+
+            if (examenCijfer < 8)
+            {
+                eindCijfer = Math.Min(eindCijfer, examenCijfer) * 5;
+            }
+
             Console.WriteLine($"Je eindcijfer is {eindCijfer}%");
 
             if (eindCijfer > 82.5)
@@ -37,18 +44,13 @@ namespace ConsoleEindcijfer
             {
                 Console.WriteLine("-> onderscheiding");
             }
-            else if (eindCijfer > 50)
+            else if (eindCijfer >= 50)
             {
                 Console.WriteLine("Voldoende");
             }
             else
             {
                 Console.WriteLine("Onvoldoende");
-            }
-
-            if (examenCijfer < 8)
-            {
-                eindCijfer = Math.Min(eindCijfer, examenCijfer);
             }
 
             Console.ReadLine();
