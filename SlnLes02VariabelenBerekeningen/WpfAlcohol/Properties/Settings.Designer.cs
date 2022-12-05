@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace djflkqjdfgoiqnrgoin.Properties
+namespace WpfAlcohol.Properties
 {
 
 

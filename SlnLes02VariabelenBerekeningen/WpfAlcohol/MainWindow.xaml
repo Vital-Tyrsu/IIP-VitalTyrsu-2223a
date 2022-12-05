@@ -1,22 +1,23 @@
-﻿<Window x:Class="djflkqjdfgoiqnrgoin.MainWindow"
+﻿<Window x:Class="WpfAlcohol.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:djflkqjdfgoiqnrgoin"
+        xmlns:local="clr-namespace:WpfAlcohol"
         mc:Ignorable="d"
-        Title="BMI calculator" Height="450" Width="800">
+        Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Label Content="Lengte: " HorizontalAlignment="Left" Margin="165,156,0,0" VerticalAlignment="Top"/>
-        <Label Content="Gewicht: " HorizontalAlignment="Left" Margin="165,187,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtLengte" HorizontalAlignment="Left" Margin="250,160,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <TextBox x:Name="txtGewicht" HorizontalAlignment="Left" Margin="250,191,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="120"/>
-        <Label Content="cm" HorizontalAlignment="Left" Margin="400,156,0,0" VerticalAlignment="Top"/>
-        <Label Content="kg" HorizontalAlignment="Left" Margin="400,187,0,0" VerticalAlignment="Top"/>
-        <Button x:Name="btnBereken" Content="BEREKENEN" HorizontalAlignment="Left" Margin="191,239,0,0" VerticalAlignment="Top" Height="39" Width="179" FontWeight="Bold" FontSize="16" Click="btnBereken_Click"/>
-        <Label Content="BMI Calculator" HorizontalAlignment="Left" Margin="165,115,0,0" VerticalAlignment="Top" Height="30" Width="258" FontSize="16" FontWeight="Bold"/>
-        <Label Content="BMI:" HorizontalAlignment="Left" Margin="165,309,0,0" VerticalAlignment="Top"/>
-        <Label x:Name="lblBMI" HorizontalAlignment="Left" Margin="203,309,0,0" VerticalAlignment="Top"/>
+        <Image HorizontalAlignment="Left" Height="62" Margin="10,53,0,0" VerticalAlignment="Top" Width="54" Source="/beer.png"/>
+        <Image HorizontalAlignment="Left" Height="77" Margin="6,134,0,0" VerticalAlignment="Top" Width="54" Source="/wine.png"/>
+        <Image HorizontalAlignment="Left" Height="55" Margin="7,213,0,0" VerticalAlignment="Top" Width="50" Source="/whiskey.png"/>
+        <Slider x:Name="sldBier" HorizontalAlignment="Left" Margin="134,71,0,0" VerticalAlignment="Top" Width="421" ValueChanged="sldBier_ValueChanged" Maximum="5"/>
+        <Slider x:Name="sldWijn" HorizontalAlignment="Left" Margin="134,152,0,0" VerticalAlignment="Top" Width="421" ValueChanged="sldWijn_ValueChanged" Maximum="5" SmallChange="1"/>
+        <Slider x:Name="sldWhiskey" HorizontalAlignment="Left" Margin="134,229,0,0" VerticalAlignment="Top" Width="421" ValueChanged="sldWhiskey_ValueChanged" Maximum="5" SmallChange="1"/>
+        <Label x:Name="lblBier" Content="" HorizontalAlignment="Left" Height="54" Margin="606,53,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="lblWijn" Content="" HorizontalAlignment="Left" Height="54" Margin="606,134,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label x:Name="lblWhiskey" HorizontalAlignment="Left" Height="54" Margin="606,217,0,0" VerticalAlignment="Top" Width="184"/>
+        <Label Content="Alcohol-gehalte:" HorizontalAlignment="Left" Height="35" Margin="10,344,0,0" VerticalAlignment="Top" Width="135"/>
+        <Rectangle x:Name="rctTotaal" HorizontalAlignment="Left" Height="35" Margin="165,344,0,0" Stroke="Black" VerticalAlignment="Top" Width="390" MaxWidth="390"/>
 
     </Grid>
 </Window>

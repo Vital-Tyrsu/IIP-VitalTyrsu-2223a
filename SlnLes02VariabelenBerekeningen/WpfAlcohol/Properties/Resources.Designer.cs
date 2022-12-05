@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace djflkqjdfgoiqnrgoin.Properties
+namespace WpfAlcohol.Properties
 {
 
 
@@ -44,7 +44,7 @@ namespace djflkqjdfgoiqnrgoin.Properties
             {
                 if ((resourceMan == null))
                 {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("djflkqjdfgoiqnrgoin.Properties.Resources", typeof(Resources).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("WpfAlcohol.Properties.Resources", typeof(Resources).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;

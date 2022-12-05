@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace djflkqjdfgoiqnrgoin
+namespace WpfAlcohol
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
@@ -25,14 +25,30 @@ namespace djflkqjdfgoiqnrgoin
             InitializeComponent();
         }
 
-        private void btnBereken_Click(object sender, RoutedEventArgs e)
+        
+        private void sldBier_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
-            int lengte = Convert.ToInt32(txtLengte.Text);
-            int gewicht = Convert.ToInt32(txtGewicht.Text);
+            
+            sldBier.IsSnapToTickEnabled = true;
+            lblBier.Content = sldBier.Value + "glazen";
+            rctTotaal.Width = sldBier.Value + sldWijn.Value + sldWhiskey.Value;
+            
+        }
 
-            double lengteInMeter = (double)lengte / 100;
-            double bmi = (double)gewicht / Math.Pow(lengteInMeter, 2);
-            lblBMI.Content = bmi.ToString("0.0");
+        private void sldWijn_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            sldWijn.IsSnapToTickEnabled = true;
+            lblWijn.Content = sldWijn.Value + " glazen";
+            rctTotaal.Width = sldBier.Value + sldWijn.Value + sldWhiskey.Value;
+            
+        }
+
+        private void sldWhiskey_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        {
+            sldWhiskey.IsSnapToTickEnabled = true;
+            lblWhiskey.Content = sldWhiskey.Value + " glazen";
+            rctTotaal.Width = sldBier.Value + sldWijn.Value+ sldWhiskey.Value;
+            
         }
     }
 }
