@@ -21,7 +21,7 @@ namespace WpfBieden
     public partial class MainWindow : Window
     {
         int hoogsteBod = 0;
-        string naamMetHoogsteBod;
+        string hoogsteBieder;
 
 
 
@@ -37,15 +37,15 @@ namespace WpfBieden
            
             int nieuwBod = Convert.ToInt32(TxtBod.Text);
 
-            if  (nieuwBod > hoogsteBod)
+            if (nieuwBod > hoogsteBod)
             {
                 lblAntwoord.Content = $"{TxtNaam.Text} heeft met {nieuwBod} euro nu het hoogste bod!";
-                hoogsteBod = nieuwBod; 
-                naamMetHoogsteBod = TxtNaam.Text;
+                hoogsteBod = nieuwBod;
+                hoogsteBieder = TxtNaam.Text;
             }
             else
             {
-                lblAntwoord.Content = $"Sorry, {naamMetHoogsteBod} heeft momenteel het hoogste bod!";
+                lblAntwoord.Content = $"Sorry, {hoogsteBieder} heeft momenteel het hoogste bod!";
             }
         }
     }
