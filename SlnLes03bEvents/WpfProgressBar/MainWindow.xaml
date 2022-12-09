@@ -8,8 +8,8 @@
         Title="WpfProgressBar" Height="450" Width="800">
     <Grid>
         <Label Content="Voortgang:" HorizontalAlignment="Left" Margin="48,194,0,0" VerticalAlignment="Top" Width="104"/>
-        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="196,241,0,0" VerticalAlignment="Top" Width="94" Click="btnStart_Click"/>
-        <Button x:Name="btnAnnuleren" Content="ANNULEREN" HorizontalAlignment="Center" Margin="0,241,0,0" VerticalAlignment="Top" Width="94" Click="btnAnnuleren_Click"/>
+        <Button x:Name="btnStart" Content="START" HorizontalAlignment="Left" Margin="196,241,0,0" VerticalAlignment="Top" Width="94" Click="BtnStart_Click"/>
+        <Button x:Name="btnAnnuleren" Content="ANNULEREN" HorizontalAlignment="Center" Margin="0,241,0,0" VerticalAlignment="Top" Width="94" Click="BtnAnnuleren_Click"/>
         <Label x:Name="lblProgress" HorizontalAlignment="Left" Margin="516,192,0,0" VerticalAlignment="Top" Height="28" Width="78"/>
         <Rectangle x:Name="rctProgressBar" HorizontalAlignment="Left" Height="24" Margin="177,194,0,0" Stroke="Black" VerticalAlignment="Top" MaxWidth="300"/>
 

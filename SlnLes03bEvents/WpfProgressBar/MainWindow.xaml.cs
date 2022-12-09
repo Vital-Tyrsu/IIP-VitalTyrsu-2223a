@@ -29,12 +29,12 @@ namespace WpfProgressBar
             InitializeComponent();
             lblProgress.Content = count;
             timer.Interval = TimeSpan.FromMilliseconds(100);
-            timer.Tick += timer_Tick;
+            timer.Tick += Timer_Tick;
             rctProgressBar.Width = 0;
             
         }
 
-        private void timer_Tick(object sender, EventArgs e)
+        private void Timer_Tick(object sender, EventArgs e)
         {
             count += 5;
             rctProgressBar.Width += 15;
@@ -47,12 +47,12 @@ namespace WpfProgressBar
             }
         }
 
-        private void btnStart_Click(object sender, RoutedEventArgs e)
+        private void BtnStart_Click(object sender, RoutedEventArgs e)
         {
             timer.Start();
         }
 
-        private void btnAnnuleren_Click(object sender, RoutedEventArgs e)
+        private void BtnAnnuleren_Click(object sender, RoutedEventArgs e)
         {
             timer.Stop();
             lblProgress.Content = 0;
