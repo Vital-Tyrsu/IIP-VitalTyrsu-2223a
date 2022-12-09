@@ -5,8 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfGebruikersnaam"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="Gebruikersnaam kiezen" Height="450" Width="800">
     <Grid>
-        
+        <Label Content="Kies een gebruikersnaam : " HorizontalAlignment="Left" Margin="119,174,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="txtGebruikersnaam" HorizontalAlignment="Left" Margin="280,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" Height="26" TextChanged="txtGebruikersnaam_TextChanged"/>
+        <Label x:Name="lblFoutmelding" HorizontalAlignment="Left" Margin="280,217,0,0" VerticalAlignment="Top" Width="303"/>
+
     </Grid>
 </Window>

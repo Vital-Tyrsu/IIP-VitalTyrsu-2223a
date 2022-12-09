@@ -20,9 +20,41 @@ namespace WpfGebruikersnaam
     /// </summary>
     public partial class MainWindow : Window
     {
+        
         public MainWindow()
         {
             InitializeComponent();
+            
+        }
+
+        private void txtGebruikersnaam_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (txtGebruikersnaam.Text.Contains(' '))
+            {
+                txtGebruikersnaam.Background = Brushes.LightSalmon;
+                lblFoutmelding.Foreground = Brushes.Red;
+                lblFoutmelding.Content = "mag geen spaties bevatten";
+            }
+            else if (txtGebruikersnaam.Text.Any(ch => !char.IsLetterOrDigit(ch)))
+            {
+                txtGebruikersnaam.Background = Brushes.LightSalmon;
+                lblFoutmelding.Foreground = Brushes.Red;
+                lblFoutmelding.Content = "mag geen speciale karakters of getallen bevatten";
+
+            }
+
+            else if (txtGebruikersnaam.Text.Any(char.IsDigit))
+            {
+                txtGebruikersnaam.Background = Brushes.LightSalmon;
+                lblFoutmelding.Foreground = Brushes.Red;
+                lblFoutmelding.Content = "mag geen speciale karakters of getallen bevatten";
+            }
+
+            else
+            {
+                txtGebruikersnaam.Background= Brushes.LightGreen;
+                lblFoutmelding.Content = "";
+            }
         }
     }
 }
