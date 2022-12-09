@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Date Picker" Height="450" Width="800">
     <Grid>
-        <DatePicker x:Name="dateDatum" HorizontalAlignment="Left" Margin="152,106,0,0" VerticalAlignment="Top" Height="30" Width="176" SelectedDateChanged="dateDatum_SelectedDateChanged" />
+        <DatePicker x:Name="dateDatum" HorizontalAlignment="Left" Margin="152,106,0,0" VerticalAlignment="Top" Height="30" Width="176" SelectedDateChanged="DateDatum_SelectedDateChanged" />
         <Label x:Name="lblDatum" HorizontalAlignment="Left" Margin="152,185,0,0" VerticalAlignment="Top" Width="370" Height="32"/>
 
     </Grid>

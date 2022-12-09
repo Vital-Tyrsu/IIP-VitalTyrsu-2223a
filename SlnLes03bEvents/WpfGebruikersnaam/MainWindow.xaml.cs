@@ -27,7 +27,7 @@ namespace WpfGebruikersnaam
             
         }
 
-        private void txtGebruikersnaam_TextChanged(object sender, TextChangedEventArgs e)
+        private void TxtGebruikersnaam_TextChanged(object sender, TextChangedEventArgs e)
         {
             if (txtGebruikersnaam.Text.Contains(' '))
             {

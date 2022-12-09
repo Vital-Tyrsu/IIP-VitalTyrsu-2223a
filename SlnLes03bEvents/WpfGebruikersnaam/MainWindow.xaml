@@ -8,7 +8,7 @@
         Title="Gebruikersnaam kiezen" Height="450" Width="800">
     <Grid>
         <Label Content="Kies een gebruikersnaam : " HorizontalAlignment="Left" Margin="119,174,0,0" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtGebruikersnaam" HorizontalAlignment="Left" Margin="280,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" Height="26" TextChanged="txtGebruikersnaam_TextChanged"/>
+        <TextBox x:Name="txtGebruikersnaam" HorizontalAlignment="Left" Margin="280,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="303" Height="26" TextChanged="TxtGebruikersnaam_TextChanged"/>
         <Label x:Name="lblFoutmelding" HorizontalAlignment="Left" Margin="280,217,0,0" VerticalAlignment="Top" Width="303"/>
 
     </Grid>

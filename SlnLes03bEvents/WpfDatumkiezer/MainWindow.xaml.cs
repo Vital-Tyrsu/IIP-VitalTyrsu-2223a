@@ -26,7 +26,7 @@ namespace WpfDatumkiezer
         }
 
 
-        private void dateDatum_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        private void DateDatum_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
         {
             lblDatum.Content = $"Je selecteerde {dateDatum.SelectedDate.Value.ToString("dd MMMM yyyy")}";
         }

@@ -28,7 +28,7 @@ namespace WpfProgressBar
         {
             InitializeComponent();
             lblProgress.Content = count;
-            timer.Interval = TimeSpan.FromMilliseconds(100);
+            timer.Interval = TimeSpan.FromSeconds(1);
             timer.Tick += Timer_Tick;
             rctProgressBar.Width = 0;
             
@@ -38,7 +38,7 @@ namespace WpfProgressBar
         {
             count += 5;
             rctProgressBar.Width += 15; // Baseer je op de MaxWidth die we zelf hebben getekend
-            rctProgressBar.Fill = Brushes.Green;
+            rctProgressBar.Fill = Brushes.LightGreen;
             lblProgress.Content = count + " %";
             if (count == 100)
             {
