@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfGebruikersnaam", "WpfGeb
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfProgressBar", "WpfProgressBar\WpfProgressBar.csproj", "{19F42A75-30E8-4EF4-BFAB-16D199C17208}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfOxo", "WpfOxo\WpfOxo.csproj", "{D741B407-18F9-4460-AE66-F046DC8765ED}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,6 +34,10 @@ Global
 		{19F42A75-30E8-4EF4-BFAB-16D199C17208}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{19F42A75-30E8-4EF4-BFAB-16D199C17208}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{19F42A75-30E8-4EF4-BFAB-16D199C17208}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D741B407-18F9-4460-AE66-F046DC8765ED}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D741B407-18F9-4460-AE66-F046DC8765ED}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D741B407-18F9-4460-AE66-F046DC8765ED}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D741B407-18F9-4460-AE66-F046DC8765ED}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

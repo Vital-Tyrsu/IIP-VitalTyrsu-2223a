@@ -23,7 +23,7 @@ namespace WpfSliderKleur
             InitializeComponent();
         }
 
-        private void sldKleur_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void SldKleur_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
         {
             lblGetal.Content = sldKleur.Value;
 

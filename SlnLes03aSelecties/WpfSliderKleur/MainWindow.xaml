@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="Slider Kleur" Height="450" Width="800">
     <Grid>
-        <Slider x:Name="sldKleur" Margin="137,176,180,201" IsSnapToTickEnabled="True" Maximum="100" Minimum="0" SmallChange="1" ValueChanged="sldKleur_ValueChanged"/>
+        <Slider x:Name="sldKleur" Margin="137,176,180,201" IsSnapToTickEnabled="True" Maximum="100" Minimum="0" SmallChange="1" ValueChanged="SldKleur_ValueChanged"/>
         <Label Content="Geselecteerde waarde: " HorizontalAlignment="Left" Margin="220,240,0,0" VerticalAlignment="Top" Height="30" Width="169"/>
         <Label x:Name="lblGetal" HorizontalAlignment="Left" Margin="420,241,0,0" VerticalAlignment="Top" Height="28" Width="59" FontSize="16" FontFamily="Arial Rounded MT Bold"/>
 

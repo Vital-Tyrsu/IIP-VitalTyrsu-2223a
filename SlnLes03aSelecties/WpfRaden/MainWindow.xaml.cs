@@ -31,7 +31,7 @@ namespace WpfRaden
         }
 
 
-        private void btnGok_Click(object sender, RoutedEventArgs e)
+        private void BtnGok_Click(object sender, RoutedEventArgs e)
         {
 
             int antwoord = Convert.ToInt32(txtGok.Text);
@@ -60,7 +60,7 @@ namespace WpfRaden
             }
         }
 
-        private void btnOpnieuw_Click(object sender, RoutedEventArgs e)
+        private void BtnOpnieuw_Click(object sender, RoutedEventArgs e)
         {
             btnGok.IsEnabled = true;
             lblAntwoord.Content = "";
