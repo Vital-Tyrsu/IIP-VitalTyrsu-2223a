@@ -37,7 +37,7 @@ namespace WpfProgressBar
         private void Timer_Tick(object sender, EventArgs e)
         {
             count += 5;
-            rctProgressBar.Width += 15;
+            rctProgressBar.Width += 15; // Baseer je op de MaxWidth die we zelf hebben getekend
             rctProgressBar.Fill = Brushes.Green;
             lblProgress.Content = count + " %";
             if (count == 100)
