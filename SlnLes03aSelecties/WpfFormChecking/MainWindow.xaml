@@ -36,8 +36,8 @@
         <Label x:Name="lblPaswoordRequired" HorizontalAlignment="Left" Margin="544,239,0,0" VerticalAlignment="Top" Width="212" Height="26" Foreground="Red"/>
         <Label x:Name="lblGeslachtRequired" HorizontalAlignment="Left" Margin="544,289,0,0" VerticalAlignment="Top" Width="212" Height="31" Foreground="Red"/>
         <Label x:Name="lblInteressesRequired" HorizontalAlignment="Left" Margin="544,333,0,0" VerticalAlignment="Top" Width="212" Height="30" Foreground="Red"/>
-        <Button x:Name="btnWissen" Content="WISSEN" HorizontalAlignment="Left" Margin="531,385,0,0" VerticalAlignment="Top" Height="25" Width="93" Click="btnWissen_Click"/>
-        <Button x:Name="btnRegistreren" Content="REGISTREREN" HorizontalAlignment="Left" Margin="663,385,0,0" VerticalAlignment="Top" Height="25" Width="93" Click="btnRegistreren_Click"/>
+        <Button x:Name="btnWissen" Content="WISSEN" HorizontalAlignment="Left" Margin="531,385,0,0" VerticalAlignment="Top" Height="25" Width="93" Click="BtnWissen_Click"/>
+        <Button x:Name="btnRegistreren" Content="REGISTREREN" HorizontalAlignment="Left" Margin="663,385,0,0" VerticalAlignment="Top" Height="25" Width="93" Click="BtnRegistreren_Click"/>
         <Label x:Name="lblResultaat" HorizontalAlignment="Left" Margin="331,381,0,0" VerticalAlignment="Top" Height="33" Width="195" Foreground="Red"/>
         <PasswordBox x:Name="pwbPassword" HorizontalAlignment="Left" Margin="220,239,0,0" VerticalAlignment="Top" Width="148" Height="26"/>
 

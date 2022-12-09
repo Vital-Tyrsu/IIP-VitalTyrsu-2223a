@@ -29,7 +29,7 @@ namespace WpfFormChecking
         }
 
 
-        private void btnRegistreren_Click(object sender, RoutedEventArgs e)
+        private void BtnRegistreren_Click(object sender, RoutedEventArgs e)
         {
             int aantalPogingen = 0;
             lblNaamRequired.Content = "";
@@ -85,7 +85,7 @@ namespace WpfFormChecking
             }
         }
 
-        private void btnWissen_Click(object sender, RoutedEventArgs e)
+        private void BtnWissen_Click(object sender, RoutedEventArgs e)
         {
             // alle labels wissen
             lblNaamRequired.Content = "";

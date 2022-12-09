@@ -32,7 +32,7 @@ namespace WpfBieden
         }
 
         
-        private void btnBod_Click(object sender, RoutedEventArgs e)
+        private void BtnBod_Click(object sender, RoutedEventArgs e)
         {
            
             int nieuwBod = Convert.ToInt32(TxtBod.Text);
