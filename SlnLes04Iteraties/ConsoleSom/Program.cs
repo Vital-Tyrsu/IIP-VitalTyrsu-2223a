@@ -12,17 +12,17 @@ namespace ConsoleSom
         {
             string input = "";
             int som = 0;
-            
+
             do
             {
                 Console.Write("Voer een getal in (q om te stoppen): ");
                 input = Convert.ToString(Console.ReadLine());
                 if (input != "q")
                 {
-                   int getal = Convert.ToInt32(input);
-                   som = som + getal;
+                    int getal = Convert.ToInt32(input);
+                    som = som + getal;
                 }
-                
+
 
             } while (input != "q");
             Console.WriteLine("De som is: " + som);
