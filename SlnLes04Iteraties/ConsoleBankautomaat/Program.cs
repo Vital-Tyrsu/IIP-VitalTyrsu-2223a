@@ -11,6 +11,7 @@ namespace ConsoleBankautomaat
     {
         static void Main(string[] args)
         {
+            
             int startBedrag = 500;
             string pinCode = "1234";
             int aantalPogingen = 2;
@@ -112,6 +113,8 @@ Bedankt en tot ziens!");
 
             }
             Console.ReadLine();
+
+
         }
     }
 }
