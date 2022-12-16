@@ -45,8 +45,8 @@ namespace WpfEllipsen
 
         private void BtnTekenen_Click(object sender, RoutedEventArgs e)
         {
-
-            int aantalEllipsen = 50;
+            
+            int aantalEllipsen = Convert.ToInt32(sldAantalCirkels.Value);  
             int minRadius = Convert.ToInt32(sldMinimumRadius.Value);
             int maxRadius = Convert.ToInt32(sldMaximumRadius.Value);
 
@@ -61,8 +61,10 @@ namespace WpfEllipsen
                 newEllipse.SetValue(Canvas.LeftProperty, xPos);
                 newEllipse.SetValue(Canvas.TopProperty, yPos);
 
-                canvas1.Children.Add(newEllipse);
+                
             }
+
+            canvas1.Children.Add(newEllipse);
         }
 
     }
