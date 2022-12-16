@@ -1,0 +1,21 @@
+﻿<Window x:Class="WpfBoodschappenlijst.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfBoodschappenlijst"
+        mc:Ignorable="d"
+        Title="Boodschappen" Height="450" Width="800" Background="#FFE8ECAA" >
+    <Grid>
+        <Label x:Name="lblSelectie" Content="Je selecteerde : " HorizontalAlignment="Left" Margin="90,300,0,0" VerticalAlignment="Top" Width="310"/>
+        <ListBox x:Name="LstBoodschappen" Margin="90,130,480,155" SelectionMode="Multiple" SelectionChanged="LstBoodschappen_SelectionChanged">
+            <ListBoxItem>brood</ListBoxItem>
+            <ListBoxItem>melk</ListBoxItem>
+            <ListBoxItem>kaas</ListBoxItem>
+            <ListBoxItem>olijven</ListBoxItem>
+            <ListBoxItem>appels</ListBoxItem>
+        </ListBox>
+        
+
+    </Grid>
+</Window>
