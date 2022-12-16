@@ -20,6 +20,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleBankautomaat", "Cons
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleKlinkers", "ConsoleKlinkers\ConsoleKlinkers.csproj", "{69AF1D16-DA3E-4BF1-A1E5-681CAC282E31}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfPriemgetal", "WpfPriemgetal\WpfPriemgetal.csproj", "{8FBABC29-C43A-4544-B401-C45C75EA4702}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -50,6 +52,10 @@ Global
 		{69AF1D16-DA3E-4BF1-A1E5-681CAC282E31}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{69AF1D16-DA3E-4BF1-A1E5-681CAC282E31}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{69AF1D16-DA3E-4BF1-A1E5-681CAC282E31}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8FBABC29-C43A-4544-B401-C45C75EA4702}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8FBABC29-C43A-4544-B401-C45C75EA4702}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8FBABC29-C43A-4544-B401-C45C75EA4702}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8FBABC29-C43A-4544-B401-C45C75EA4702}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
