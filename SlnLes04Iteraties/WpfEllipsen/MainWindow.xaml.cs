@@ -23,7 +23,7 @@ namespace WpfEllipsen
         public MainWindow()
         {
             InitializeComponent();
-            
+            canvas1.Children.Add(newEllipse);
         }
 
         Ellipse newEllipse = new Ellipse();
@@ -49,23 +49,19 @@ namespace WpfEllipsen
             int aantalEllipsen = Convert.ToInt32(sldAantalCirkels.Value);  
             int minRadius = Convert.ToInt32(sldMinimumRadius.Value);
             int maxRadius = Convert.ToInt32(sldMaximumRadius.Value);
-
-
-            for (int i = 0; i < aantalEllipsen; i++)
-            {
-                newEllipse.Width =  maxRadius;
-                newEllipse.Height = minRadius; 
-                newEllipse.Fill = new SolidColorBrush(Color.FromRgb((byte)rnd.Next(1, 255), (byte)rnd.Next(1, 255), (byte)rnd.Next(1, 255)));
-                double xPos = rnd.Next(10,700);
-                double yPos = rnd.Next(10,250);
-                newEllipse.SetValue(Canvas.LeftProperty, xPos);
-                newEllipse.SetValue(Canvas.TopProperty, yPos);
-
+           
+                if (aantalEllipsen > 0)
+                {
+                    newEllipse.Width = maxRadius;
+                    newEllipse.Height = minRadius;
+                    newEllipse.Fill = new SolidColorBrush(Color.FromRgb((byte)rnd.Next(1, 255), (byte)rnd.Next(1, 255), (byte)rnd.Next(1, 255)));
+                    double xPos = rnd.Next(10, 700);
+                    double yPos = rnd.Next(10, 250);
+                    newEllipse.SetValue(Canvas.LeftProperty, xPos);
+                    newEllipse.SetValue(Canvas.TopProperty, yPos); 
+                }
                 
-            }
-
-            canvas1.Children.Add(newEllipse);
+            
         }
-
     }
 }
