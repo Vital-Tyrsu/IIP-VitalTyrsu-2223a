@@ -11,16 +11,25 @@ namespace ConsoleTafels
     {
         static void Main(string[] args)
         {
-            int getal1;
-            int lengte1;
+            while (true)
+            {
+                int getal1;
+                int lengte1;
 
-            Console.Write("Geef een getal: ");
-            getal1 = Convert.ToInt32(Console.ReadLine());
-            VraagPositiefGetal(getal1);
-            Console.Write("Geef een lengte: ");
-            lengte1 = Convert.ToInt32(Console.ReadLine());
-
-            DrukTafel(getal1, lengte1);
+                Console.Write("Geef een getal: ");
+                getal1 = Convert.ToInt32(Console.ReadLine());
+                if (getal1 < 0)
+                {
+                    VraagPositiefGetal(getal1);
+                }
+                else
+                {
+                    Console.Write("Geef een lengte: ");
+                    lengte1 = Convert.ToInt32(Console.ReadLine());
+                    DrukTafel(getal1, lengte1);
+                }
+                
+            }
             Console.ReadLine();
         }
 
