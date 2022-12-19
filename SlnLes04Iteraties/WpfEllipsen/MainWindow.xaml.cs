@@ -49,7 +49,9 @@ namespace WpfEllipsen
             int aantalEllipsen = Convert.ToInt32(sldAantalCirkels.Value);  
             int minRadius = Convert.ToInt32(sldMinimumRadius.Value);
             int maxRadius = Convert.ToInt32(sldMaximumRadius.Value);
-           
+
+            while (aantalEllipsen > 0)
+            {
                 if (aantalEllipsen > 0)
                 {
                     newEllipse.Width = maxRadius;
@@ -58,8 +60,10 @@ namespace WpfEllipsen
                     double xPos = rnd.Next(10, 700);
                     double yPos = rnd.Next(10, 250);
                     newEllipse.SetValue(Canvas.LeftProperty, xPos);
-                    newEllipse.SetValue(Canvas.TopProperty, yPos); 
+                    newEllipse.SetValue(Canvas.TopProperty, yPos);
                 }
+            }
+               
                 
             
         }

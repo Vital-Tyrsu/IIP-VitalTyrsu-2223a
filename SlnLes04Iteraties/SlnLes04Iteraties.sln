@@ -26,6 +26,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfBoodschappenlijst", "Wpf
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfEllipsen", "WpfEllipsen\WpfEllipsen.csproj", "{22D79CD8-039D-4EC9-85F2-301B3128417A}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleGGD", "ConsoleGGD\ConsoleGGD.csproj", "{167DC96E-FEC8-43ED-8DD1-948BC3CCA893}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -68,6 +70,10 @@ Global
 		{22D79CD8-039D-4EC9-85F2-301B3128417A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{22D79CD8-039D-4EC9-85F2-301B3128417A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{22D79CD8-039D-4EC9-85F2-301B3128417A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{167DC96E-FEC8-43ED-8DD1-948BC3CCA893}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{167DC96E-FEC8-43ED-8DD1-948BC3CCA893}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{167DC96E-FEC8-43ED-8DD1-948BC3CCA893}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{167DC96E-FEC8-43ED-8DD1-948BC3CCA893}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
