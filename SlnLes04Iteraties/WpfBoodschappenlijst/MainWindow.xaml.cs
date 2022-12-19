@@ -20,6 +20,7 @@ namespace WpfBoodschappenlijst
     /// </summary>
     public partial class MainWindow : Window
     {
+        string lijst;
         public MainWindow()
         {
             InitializeComponent();
@@ -28,15 +29,13 @@ namespace WpfBoodschappenlijst
         private void LstBoodschappen_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             
+
             foreach (ListBoxItem item in LstBoodschappen.SelectedItems)
             {
-                string lijst = Convert.ToString(item.Content);
-                lblSelectie.Content = lijst;
-                if ()
-                {
+                lijst = Convert.ToString(item.Content);
 
-                }
             }
+            lblSelectie.Content += " " + lijst;
 
 
         }
