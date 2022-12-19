@@ -10,9 +10,7 @@ namespace ConsoleTemperatuur
     {
         static void Main(string[] args)
         {
-            double celsius;
-            double fahrenheit;
-            double kelvin;
+            double getal;
             char keuze = ' ';
 
 
@@ -32,31 +30,54 @@ x. Afsluiten");
                 if (keuze == 'a')
                 {
                     Console.Write("Celsius: ");
-                    celsius = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("-> naar Fahrenheit: ");
+                    getal = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine($"-> naar Fahrenheit: {CelsiusFahrenheit(getal)}");
                 }
                 if (keuze == 'b')
                 {
                     Console.Write("Fahrenheit: ");
-                    celsius = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("-> naar Celsius: ");
+                    getal = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine($"-> naar Celsius: {FahrenheitCelsius(getal)} ");
                 }
                 if (keuze == 'c')
                 {
                     Console.Write("Celsius: ");
-                    celsius = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("-> naar Kelvin: ");
+                    getal = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine($"-> naar Kelvin: {CelsiusKelvin(getal)}");
                 }
                 if (keuze == 'd')
                 {
                     Console.Write("Kelvin: ");
-                    celsius = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine("-> naar Celsius: ");
+                    getal = Convert.ToDouble(Console.ReadLine());
+                    Console.WriteLine($"-> naar Celsius: {KelvinCelsius(getal)}");
                 }
             }
             Console.WriteLine("Bedankt en tot ziens!");
            
-            Console.ReadLine();
+            Console.ReadLine(); 
+        }
+        static private double CelsiusFahrenheit(double getal1)
+        {
+            getal1 = Math.Round((getal1 * 1.8 + 32),2);
+            return getal1;
+        }
+
+        static private double FahrenheitCelsius(double getal1)
+        {
+            getal1 = Math.Round(((getal1 - 32) / 1.80),2);
+            return getal1;
+        }
+
+        static private double CelsiusKelvin(double getal1)
+        {
+            getal1 = Math.Round((getal1 + 273.15),2);
+            return getal1;
+        }
+        static private double KelvinCelsius(double getal1)
+        {
+            getal1 = Math.Round((getal1 - 273.15),2);
+            return getal1;
         }
     }
+
 }
