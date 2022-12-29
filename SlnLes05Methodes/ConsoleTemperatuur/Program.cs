@@ -31,25 +31,25 @@ x. Afsluiten");
                 {
                     Console.Write("Celsius: ");
                     getal = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine($"-> naar Fahrenheit: {CelsiusFahrenheit(getal)}");
+                    Console.WriteLine($"-> naar Fahrenheit: {CelsiusFahrenheit(getal)}°F");
                 }
                 if (keuze == 'b')
                 {
                     Console.Write("Fahrenheit: ");
                     getal = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine($"-> naar Celsius: {FahrenheitCelsius(getal)} ");
+                    Console.WriteLine($"-> naar Celsius: {FahrenheitCelsius(getal)}°C");
                 }
                 if (keuze == 'c')
                 {
                     Console.Write("Celsius: ");
                     getal = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine($"-> naar Kelvin: {CelsiusKelvin(getal)}");
+                    Console.WriteLine($"-> naar Kelvin: {CelsiusKelvin(getal)}K");
                 }
                 if (keuze == 'd')
                 {
                     Console.Write("Kelvin: ");
                     getal = Convert.ToDouble(Console.ReadLine());
-                    Console.WriteLine($"-> naar Celsius: {KelvinCelsius(getal)}");
+                    Console.WriteLine($"-> naar Celsius: {KelvinCelsius(getal)}°C");
                 }
             }
             Console.WriteLine("Bedankt en tot ziens!");
