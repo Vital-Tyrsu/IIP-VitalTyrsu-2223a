@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Media;
 
 
 namespace SequenceSpel
@@ -12,6 +13,7 @@ namespace SequenceSpel
 
         static void Main(string[] args)
         {
+            
             // Initialiseer het spel
 
 
@@ -90,52 +92,57 @@ namespace SequenceSpel
                 }
 
               
-            }
-
-
-            
+            }            
             Console.ReadLine();
         }
 
 
         // Methode
-        static string GetColorName(int color)
+        static string GetColorName(int keuze)
         {
-            if (color == 1)
+            if (keuze == 1)
             {
-                Console.Beep(1000, 500);
-                return "Red";
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/hond.wav");
+                SoundPlayer player = new SoundPlayer(path);
+                player.Play();            
+                return "hond";
             }
-            else if (color == 2)
+            else if (keuze == 2)
             {
-                Console.Beep(250, 500);
-                return "Blue";
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/hond.wav");
+                SoundPlayer player = new SoundPlayer(path);
+                player.Play();               
+                return "koe";
             }
-            else if (color == 3)
+            else if (keuze == 3)
             {
-                Console.Beep(500, 500);
-                return "Green";
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/hond.wav");
+                SoundPlayer player = new SoundPlayer(path);
+                player.Play();
+                return "kuikentje";
             }
             else
             {
-                Console.Beep(750, 500);
-                return "Yellow";
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/hond.wav");
+                SoundPlayer player = new SoundPlayer(path);
+                player.Play();              
+                return "paard";
             }
         }
 
         static void ColorText()
         {
             Console.ForegroundColor = ConsoleColor.Red;
-            Console.WriteLine("Rood = 1");
+            Console.WriteLine("Hond = 1");
             Console.ForegroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Blue;
-            Console.WriteLine("Blauw = 2");
+            Console.WriteLine("Koe = 2");
             Console.ForegroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Green;
-            Console.WriteLine("Groen = 3");
+            Console.WriteLine("Kuikentje = 3");
             Console.ForegroundColor = ConsoleColor.White;
             Console.ForegroundColor = ConsoleColor.Yellow;
-            Console.WriteLine("Geel = 4");
+            Console.WriteLine("Paard = 4");
             Console.ForegroundColor = ConsoleColor.White;
         }
     }
