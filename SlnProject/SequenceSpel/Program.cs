@@ -109,21 +109,21 @@ namespace SequenceSpel
             }
             else if (keuze == 2)
             {
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/hond.wav");
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/koe.wav");
                 SoundPlayer player = new SoundPlayer(path);
                 player.Play();               
                 return "koe";
             }
             else if (keuze == 3)
             {
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/hond.wav");
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/kuikentje.wav");
                 SoundPlayer player = new SoundPlayer(path);
                 player.Play();
                 return "kuikentje";
             }
             else
             {
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/hond.wav");
+                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/paard.wav");
                 SoundPlayer player = new SoundPlayer(path);
                 player.Play();              
                 return "paard";

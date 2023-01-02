@@ -61,7 +61,9 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <Content Include="sounds\hond.wav" />
+    <Content Include="sounds\hond.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="sounds\koe.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
