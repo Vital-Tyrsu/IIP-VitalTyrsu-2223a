@@ -96,37 +96,33 @@ namespace SequenceSpel
             Console.ReadLine();
         }
 
+        static string playSound (string sound)
+        {
+            string path = System.IO.Path.Combine(Environment.CurrentDirectory, sound);
+            SoundPlayer player = new SoundPlayer(path);
+            player.Play();
+            return " ";
+        }
+
 
         // Methode
         static string GetColorName(int keuze)
         {
             if (keuze == 1)
             {
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/hond.wav");
-                SoundPlayer player = new SoundPlayer(path);
-                player.Play();            
-                return "hond";
+                return playSound("sounds/hond.wav");
             }
             else if (keuze == 2)
             {
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/koe.wav");
-                SoundPlayer player = new SoundPlayer(path);
-                player.Play();               
-                return "koe";
+                return playSound("sounds/koe.wav");
             }
             else if (keuze == 3)
             {
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/kuikentje.wav");
-                SoundPlayer player = new SoundPlayer(path);
-                player.Play();
-                return "kuikentje";
+                return playSound("sounds/kuikentje.wav");
             }
             else
             {
-                string path = System.IO.Path.Combine(Environment.CurrentDirectory, "sounds/paard.wav");
-                SoundPlayer player = new SoundPlayer(path);
-                player.Play();              
-                return "paard";
+                return playSound("sounds/paard.wav");
             }
         }
 
