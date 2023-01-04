@@ -4,12 +4,49 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Media;
+using System.IO;
 
 
 namespace SequenceSpel
 {
     class Program
     {
+        static void readFile()
+        {
+            try
+            {
+                FileStream f = new FileStream("score.txt", FileMode.OpenOrCreate); // dient om in de files aanpassingen te maken
+                using (StreamReader sr = new StreamReader(f)) // Hier dient de Streamreader om de tekst in een file te lezen
+                {
+                    string line;
+                    // Leest de file tot het einde
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        Console.WriteLine(line);
+                    }
+                }
+                
+            }
+            catch (Exception e)
+            {
+                Console.WriteLine("Bestand kon niet gelezen worden");
+                Console.WriteLine(e.Message);
+                
+            }
+        }
+
+        static void writeFile(string naam, int round)
+        {
+
+            FileStream fs = File.Open("score.txt", FileMode.Append);
+
+            using (StreamWriter sw = new StreamWriter(fs))
+            {
+                string str = "Naam:" + naam + ", Round" + round;
+                
+                sw.WriteLine(str);
+            }
+        }
 
         static void Main(string[] args)
         {
@@ -21,12 +58,13 @@ namespace SequenceSpel
             Random random = new Random();
             List<int> pattern = new List<int>();
             int round = 1;
-
+            Console.WriteLine("Beste scores: ");
+            readFile();
             Console.Write("Voer je naam in: ");
             string naam = Console.ReadLine();
             Console.WriteLine("Hoeveel rounds wens je te spelen? ");
             int numRounds = Convert.ToInt32(Console.ReadLine());
-
+            
             ColorText();
 
             // Start de game loop
@@ -45,7 +83,7 @@ namespace SequenceSpel
                 {
                     Console.Write(GetColorName(color));
                     Console.Write(" ");
-                    System.Threading.Thread.Sleep(500);
+                    System.Threading.Thread.Sleep(1000);
                 }
                 Console.WriteLine();
 
@@ -76,7 +114,9 @@ namespace SequenceSpel
                 if (input.SequenceEqual(pattern))
                 {
                     Console.Beep(2000, 500);
+                    Console.WriteLine("");
                     Console.WriteLine("Correct!");
+                    
                     round++;
                 }
                 else
@@ -92,7 +132,8 @@ namespace SequenceSpel
                 }
 
               
-            }            
+            }
+            writeFile(naam, round);
             Console.ReadLine();
         }
 
