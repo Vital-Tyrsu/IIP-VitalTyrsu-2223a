@@ -61,10 +61,18 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="sounds\complete.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="sounds\correct.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="sounds\gameover.wav" />
+    <Content Include="sounds\correctAntwoord.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="sounds\gameover.wav">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
     <Content Include="sounds\hond.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

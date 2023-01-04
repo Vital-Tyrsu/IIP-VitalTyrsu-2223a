@@ -11,6 +11,7 @@ namespace SequenceSpel
 {
     class Program
     {
+        // Methode
         static void readFile()
         {
             try
@@ -35,6 +36,7 @@ namespace SequenceSpel
             }
         }
 
+        // Methode
         static void writeFile(string naam, int round)
         {
 
@@ -67,7 +69,7 @@ c) spel eindigen");
 
                 Random random = new Random();
                 List<int> pattern = new List<int>();
-                int round = 0;
+                int round = 1;
                 switch (keuze)
                 {
                     case 'a':
@@ -85,7 +87,7 @@ c) spel eindigen");
                         while (round <= numRounds)
                         {
                             // Display ronde nummer
-                            Console.WriteLine($"Round {round + 1}");
+                            Console.WriteLine($"Round {round}");
 
                             // Nieuwe kleur toevoegen aan de pattern
                             pattern.Add(random.Next(1, 5));
@@ -97,8 +99,8 @@ c) spel eindigen");
                             {
                                 Console.Write(GetAnimalName(color));
                                 Console.Write(" ");
-                                System.Threading.Thread.Sleep(1000);
-
+                                System.Threading.Thread.Sleep(2000);
+                                
                             }
                             Console.WriteLine();
 
@@ -128,7 +130,7 @@ c) spel eindigen");
                             // Check als input correct is
                             if (input.SequenceEqual(pattern))
                             {
-                                Console.Beep(1000, 500);
+                                playSound("sounds/correctAntwoord.wav");
                                 Console.WriteLine("");
                                 Console.WriteLine("Correct!");
 
@@ -136,13 +138,14 @@ c) spel eindigen");
                             }
                             else
                             {
-                                Console.Beep(50, 500);
+                                playSound("sounds/gameover.wav");
                                 Console.WriteLine("Incorrect! Game over. Je maximale score was: " + round++);
                                 break;
                             }
 
                             if (round > numRounds)
                             {
+                                playSound("sounds/complete.wav");
                                 Console.WriteLine("Je hebt gewonnen! ");
                             }
 
@@ -159,7 +162,7 @@ c) spel eindigen");
                         break;
 
                     case 'c':
-                        playSound("sounds/correct.wav");
+                        playSound("sounds/gameover.wav");
                         Console.WriteLine(@"
 Dit programma sluit automatisch af na 3 seconden
 Bedankt en tot ziens!");
@@ -168,13 +171,10 @@ Bedankt en tot ziens!");
                         break;
 
                 }
-            }
-           
-           
-
-            
+            }     
         }
 
+        // Methode
         static string playSound (string sound)
         {
             string path = System.IO.Path.Combine(Environment.CurrentDirectory, sound);
@@ -182,7 +182,6 @@ Bedankt en tot ziens!");
             player.Play();
             return " ";
         }
-
 
         // Methode
         static string GetAnimalName(int keuze)
@@ -205,6 +204,7 @@ Bedankt en tot ziens!");
             }
         }
 
+        // Methode
         static void ColorText()
         {
             Console.ForegroundColor = ConsoleColor.Red;
