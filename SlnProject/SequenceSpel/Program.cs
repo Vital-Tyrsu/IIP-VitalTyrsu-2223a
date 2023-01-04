@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Media;
 using System.IO;
-
+using System.Threading;
 
 namespace SequenceSpel
 {
@@ -48,93 +48,131 @@ namespace SequenceSpel
             }
         }
 
+
         static void Main(string[] args)
         {
-            
-            // Initialiseer het spel
+            char keuze = ' ';
 
-
-
-            Random random = new Random();
-            List<int> pattern = new List<int>();
-            int round = 1;
-            Console.WriteLine("Beste scores: ");
-            readFile();
-            Console.Write("Voer je naam in: ");
-            string naam = Console.ReadLine();
-            Console.WriteLine("Hoeveel rounds wens je te spelen? ");
-            int numRounds = Convert.ToInt32(Console.ReadLine());
-            
-            ColorText();
-
-            // Start de game loop
-            while (round <= numRounds)
+            Console.WriteLine("Welkom in het spel !");
+            while (keuze!='c')
             {
-                // Display ronde nummer
-                Console.WriteLine($"Round {round}");
+                Console.WriteLine("Maak je keuze:");
+                Console.WriteLine(@"a) Speel
+b) scores bekijken
+c) spel eindigen");
 
-                // Nieuwe kleur toevoegen aan de pattern
-                pattern.Add(random.Next(1, 5));
+                keuze = Convert.ToChar(Console.ReadLine());
 
+                // Initialiseer het spel
 
-
-                // De sequentie wordt zichtbaar
-                foreach (int color in pattern)
+                Random random = new Random();
+                List<int> pattern = new List<int>();
+                int round = 0;
+                switch (keuze)
                 {
-                    Console.Write(GetColorName(color));
-                    Console.Write(" ");
-                    System.Threading.Thread.Sleep(1000);
-                }
-                Console.WriteLine();
+                    case 'a':
+                        playSound("sounds/correct.wav");
+                        Console.Write("Voer je naam in: ");
+                        string naam = Console.ReadLine();
+                        playSound("sounds/correct.wav");
+                        Console.WriteLine("Hoeveel rounds wens je te spelen? ");
+                        int numRounds = Convert.ToInt32(Console.ReadLine());
+                        playSound("sounds/correct.wav");
 
-                // Neemt de input op
-                List<int> input = new List<int>();
-                while (input.Count < pattern.Count)
-                {
-                    char key = Console.ReadKey().KeyChar;
-                    if (key == '1')
-                    {
-                        input.Add(1);
-                    }
-                    else if (key == '2')
-                    {
-                        input.Add(2);
-                    }
-                    else if (key == '3')
-                    {
-                        input.Add(3);
-                    }
-                    else if (key == '4')
-                    {
-                        input.Add(4);
-                    }
-                }
+                        ColorText();
 
-                // Check als input correct is
-                if (input.SequenceEqual(pattern))
-                {
-                    Console.Beep(2000, 500);
-                    Console.WriteLine("");
-                    Console.WriteLine("Correct!");
-                    
-                    round++;
-                }
-                else
-                {
-                    Console.Beep(50, 500);
-                    Console.WriteLine("Incorrect! Game over. Je maximale score was: " + round++);
-                    break;
-                }
+                        // Start de game loop
+                        while (round <= numRounds)
+                        {
+                            // Display ronde nummer
+                            Console.WriteLine($"Round {round + 1}");
 
-                if (round > numRounds)
-                {
-                    Console.WriteLine("Je hebt gewonnen! ");
-                }
+                            // Nieuwe kleur toevoegen aan de pattern
+                            pattern.Add(random.Next(1, 5));
 
-              
+
+
+                            // De sequentie wordt zichtbaar
+                            foreach (int color in pattern)
+                            {
+                                Console.Write(GetAnimalName(color));
+                                Console.Write(" ");
+                                System.Threading.Thread.Sleep(1000);
+
+                            }
+                            Console.WriteLine();
+
+                            // Neemt de input op
+                            List<int> input = new List<int>();
+                            while (input.Count < pattern.Count)
+                            {
+                                char key = Console.ReadKey().KeyChar;
+                                if (key == '1')
+                                {
+                                    input.Add(1);
+                                }
+                                else if (key == '2')
+                                {
+                                    input.Add(2);
+                                }
+                                else if (key == '3')
+                                {
+                                    input.Add(3);
+                                }
+                                else if (key == '4')
+                                {
+                                    input.Add(4);
+                                }
+                            }
+
+                            // Check als input correct is
+                            if (input.SequenceEqual(pattern))
+                            {
+                                Console.Beep(1000, 500);
+                                Console.WriteLine("");
+                                Console.WriteLine("Correct!");
+
+                                round++;
+                            }
+                            else
+                            {
+                                Console.Beep(50, 500);
+                                Console.WriteLine("Incorrect! Game over. Je maximale score was: " + round++);
+                                break;
+                            }
+
+                            if (round > numRounds)
+                            {
+                                Console.WriteLine("Je hebt gewonnen! ");
+                            }
+
+
+                        }
+                        writeFile(naam, round);
+                        Console.ReadLine();
+                        break;
+
+                    case 'b':
+                        playSound("sounds/correct.wav");
+                        Console.WriteLine("Beste scores: ");
+                        readFile();
+                        break;
+
+                    case 'c':
+                        playSound("sounds/correct.wav");
+                        Console.WriteLine(@"
+Dit programma sluit automatisch af na 3 seconden
+Bedankt en tot ziens!");
+                        Thread.Sleep(3000); // programma sluit zich automatisch af na 3 sec.
+                        Environment.Exit(1); // men controleert als het programma effectief goed is afgesloten. Je mag je eigen getal kiezen in dit geval (1).
+                        break;
+
+                }
             }
-            writeFile(naam, round);
-            Console.ReadLine();
+           
+           
+
+            
         }
 
         static string playSound (string sound)
@@ -147,7 +185,7 @@ namespace SequenceSpel
 
 
         // Methode
-        static string GetColorName(int keuze)
+        static string GetAnimalName(int keuze)
         {
             if (keuze == 1)
             {
