@@ -141,7 +141,7 @@ c) spel eindigen");
                             // De sequentie wordt zichtbaar
                             foreach (int color in pattern)
                             {
-                                Console.Write(GetAnimalName(color));
+                                Console.Write(getAnimalName(color));
                                 Console.Write(" ");
                                 System.Threading.Thread.Sleep(2000);
                                 Console.SetCursorPosition(0, Console.CursorTop - 1);
@@ -236,7 +236,7 @@ Bedankt en tot ziens!");
         }
 
         // Methode
-        static string GetAnimalName(int keuze)
+        static string getAnimalName(int keuze)
         {
             if (keuze == 1)
             {
