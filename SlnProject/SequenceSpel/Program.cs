@@ -6,14 +6,16 @@ using System.Threading.Tasks;
 using System.Media;
 using System.IO;
 using System.Threading;
+using System.Data.SqlClient;
 
 namespace SequenceSpel
 {
     class Program
     {
         // Methode
-        static void readFile()
+        static int fileSize()
         {
+            int cpt = 0;
             try
             {
                 FileStream f = new FileStream("score.txt", FileMode.OpenOrCreate); // dient om in de files aanpassingen te maken
@@ -23,17 +25,60 @@ namespace SequenceSpel
                     // Leest de file tot het einde
                     while ((line = sr.ReadLine()) != null)
                     {
-                        Console.WriteLine(line);
+                        cpt++;
                     }
                 }
-                
+
             }
             catch (Exception e)
             {
                 Console.WriteLine("Bestand kon niet gelezen worden");
                 Console.WriteLine(e.Message);
-                
+
             }
+            return cpt;
+        }
+
+        static void readFile()
+        {
+            
+
+            using (StreamReader reader = new StreamReader("score.txt"))
+            {
+                // Créez une liste pour stocker chaque ligne du fichier
+                List<string[]> lines = new List<string[]>();
+
+                // Lis chaque ligne du fichier jusqu'à ce qu'on atteigne la fin du fichier
+                string line;
+                while ((line = reader.ReadLine()) != null)
+                {
+                    // Utilisez la méthode Split pour diviser la ligne en plusieurs parties en fonction de la virgule
+                    string[] parts = line.Split(',');
+
+                    // Ajoutez la ligne divisée à la liste
+                    lines.Add(parts);
+                }
+
+
+                // Utilisez la méthode Sort de la liste et fournissez un comparateur personalisé pour trier les lignes
+                // en fonction de la valeur de la deuxième partie de chaque ligne
+                lines.Sort((b, a) =>
+                {
+                    // Récupérez la valeur de la deuxième partie de chaque ligne (c'est-à-dire la valeur après le délimiteur "Round:")
+                    string roundA = a[1].Split(':')[1];
+                    string roundB = b[1].Split(':')[1];
+
+                    // Convertissez ces valeurs en entiers et utilisez-les pour comparer les lignes
+                    int roundANum = int.Parse(roundA);
+                    int roundBNum = int.Parse(roundB);
+                    return roundANum.CompareTo(roundBNum);
+                });
+
+                foreach (string[] parts in lines){    
+                    Console.WriteLine(string.Join(", ", parts));
+                }
+
+        }
         }
 
         // Methode
@@ -44,9 +89,12 @@ namespace SequenceSpel
 
             using (StreamWriter sw = new StreamWriter(fs))
             {
-                string str = "Naam:" + naam + ", Round" + round;
-                
+                string str = "Naam:" + naam + ", Round:" + round;
+
+                List<string> words = new List<string> { str };
+                words.Sort();
                 sw.WriteLine(str);
+
             }
         }
 
@@ -56,7 +104,7 @@ namespace SequenceSpel
             char keuze = ' ';
 
             Console.WriteLine("Welkom in het spel !");
-            while (keuze!='c')
+            while (keuze != 'c')
             {
                 Console.WriteLine("Maak je keuze:");
                 Console.WriteLine(@"a) Speel
@@ -93,14 +141,14 @@ c) spel eindigen");
                             pattern.Add(random.Next(1, 5));
 
 
-
                             // De sequentie wordt zichtbaar
                             foreach (int color in pattern)
                             {
                                 Console.Write(GetAnimalName(color));
                                 Console.Write(" ");
                                 System.Threading.Thread.Sleep(2000);
-                                
+                                Console.SetCursorPosition(0, Console.CursorTop - 1);
+                                ClearCurrentConsoleLine();
                             }
                             Console.WriteLine();
 
@@ -151,6 +199,7 @@ c) spel eindigen");
 
 
                         }
+                        round--;
                         writeFile(naam, round);
                         Console.ReadLine();
                         break;
@@ -171,11 +220,17 @@ Bedankt en tot ziens!");
                         break;
 
                 }
-            }     
+            }
+        }
+
+
+        private static void ClearCurrentConsoleLine() // aanpassen
+        {
+            Console.Write("\r" + new string(' ', Console.WindowWidth) + "\r");
         }
 
         // Methode
-        static string playSound (string sound)
+        static string playSound(string sound)
         {
             string path = System.IO.Path.Combine(Environment.CurrentDirectory, sound);
             SoundPlayer player = new SoundPlayer(path);
