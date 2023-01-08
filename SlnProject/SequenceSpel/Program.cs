@@ -45,30 +45,27 @@ namespace SequenceSpel
 
             using (StreamReader reader = new StreamReader("score.txt"))
             {
-                // Créez une liste pour stocker chaque ligne du fichier
+                // Maak een lijst om elke regel van het bestand op te slaan
                 List<string[]> lines = new List<string[]>();
 
-                // Lis chaque ligne du fichier jusqu'à ce qu'on atteigne la fin du fichier
+                // Lees elke regel van het bestand totdat je het einde van het bestand bereikt
                 string line;
                 while ((line = reader.ReadLine()) != null)
                 {
-                    // Utilisez la méthode Split pour diviser la ligne en plusieurs parties en fonction de la virgule
+                    // ik gebruik de methode ToSplit om de lijn op te splitsen in meerdere delen op basis van een komma
                     string[] parts = line.Split(',');
-
-                    // Ajoutez la ligne divisée à la liste
                     lines.Add(parts);
                 }
 
 
-                // Utilisez la méthode Sort de la liste et fournissez un comparateur personalisé pour trier les lignes
-                // en fonction de la valeur de la deuxième partie de chaque ligne
+                // Hier gebruik ik de methode Sort
                 lines.Sort((b, a) =>
                 {
-                    // Récupérez la valeur de la deuxième partie de chaque ligne (c'est-à-dire la valeur après le délimiteur "Round:")
+                    // Haal de waarde op van het tweede deel van elke regel getal na de "round:"
                     string roundA = a[1].Split(':')[1];
                     string roundB = b[1].Split(':')[1];
 
-                    // Convertissez ces valeurs en entiers et utilisez-les pour comparer les lignes
+                    // Hier zorg ik dan voor een convert van mijn waarden
                     int roundANum = int.Parse(roundA);
                     int roundBNum = int.Parse(roundB);
                     return roundANum.CompareTo(roundBNum);
