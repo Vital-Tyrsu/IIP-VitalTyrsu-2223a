@@ -7,6 +7,11 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="51,247,0,0" VerticalAlignment="Top" Height="48" Width="107"/>
+        <Button x:Name="btnSeeScores" Content="See Scores" HorizontalAlignment="Left" Margin="190,322,0,0" VerticalAlignment="Top" Height="48" Width="107" />
+        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="50,320,0,0" VerticalAlignment="Top" Height="48" Width="107"/>
+        <Label x:Name="lblAntwoord" Content="Label" HorizontalAlignment="Left" Margin="50,35,0,0" VerticalAlignment="Top" Width="342" Height="40"/>
+
+
     </Grid>
 </Window>

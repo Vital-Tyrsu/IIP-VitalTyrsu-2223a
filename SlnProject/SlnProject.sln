@@ -5,7 +5,7 @@ VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SequenceSpel", "SequenceSpel\SequenceSpel.csproj", "{D3C11FD0-0473-469E-B7B4-81DD035C11AA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSequenceGame", "WpfSequenceGame\WpfSequenceGame.csproj", "{6296E101-F5A9-4360-9D35-5BD082299A4B}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfSequenceGame", "WpfSequenceGame\WpfSequenceGame.csproj", "{E36B55A2-CB30-4264-824E-8F5E57AD5F94}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -17,10 +17,10 @@ Global
 		{D3C11FD0-0473-469E-B7B4-81DD035C11AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3C11FD0-0473-469E-B7B4-81DD035C11AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3C11FD0-0473-469E-B7B4-81DD035C11AA}.Release|Any CPU.Build.0 = Release|Any CPU
-		{6296E101-F5A9-4360-9D35-5BD082299A4B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6296E101-F5A9-4360-9D35-5BD082299A4B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6296E101-F5A9-4360-9D35-5BD082299A4B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6296E101-F5A9-4360-9D35-5BD082299A4B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E36B55A2-CB30-4264-824E-8F5E57AD5F94}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E36B55A2-CB30-4264-824E-8F5E57AD5F94}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E36B55A2-CB30-4264-824E-8F5E57AD5F94}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E36B55A2-CB30-4264-824E-8F5E57AD5F94}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

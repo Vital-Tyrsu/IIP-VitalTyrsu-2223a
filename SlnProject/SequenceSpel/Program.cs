@@ -69,6 +69,7 @@ namespace SequenceSpel
                     int roundANum = int.Parse(roundA);
                     int roundBNum = int.Parse(roundB);
                     return roundANum.CompareTo(roundBNum);
+                    
                 });
 
                 foreach (string[] parts in lines){    
@@ -87,11 +88,7 @@ namespace SequenceSpel
             using (StreamWriter sw = new StreamWriter(fs))
             {
                 string str = "Naam:" + naam + ", Round:" + round;
-
-                List<string> words = new List<string> { str };
-                words.Sort();
                 sw.WriteLine(str);
-
             }
         }
 
@@ -137,15 +134,12 @@ c) spel eindigen");
                             // Nieuwe kleur toevoegen aan de pattern
                             pattern.Add(random.Next(1, 5));
 
-
                             // De sequentie wordt zichtbaar
                             foreach (int color in pattern)
                             {
                                 Console.Write(getAnimalName(color));
                                 Console.Write(" ");
                                 System.Threading.Thread.Sleep(2000);
-                                Console.SetCursorPosition(0, Console.CursorTop - 1);
-                                ClearCurrentConsoleLine();
                             }
                             Console.WriteLine();
 
@@ -221,10 +215,11 @@ Bedankt en tot ziens!");
         }
 
 
-        private static void ClearCurrentConsoleLine() // aanpassen
+       /* private static void ClearCurrentConsoleLine() // aanpassen
         {
             Console.Write("\r" + new string(' ', Console.WindowWidth) + "\r");
         }
+       */
 
         // Methode
         static string playSound(string sound)
