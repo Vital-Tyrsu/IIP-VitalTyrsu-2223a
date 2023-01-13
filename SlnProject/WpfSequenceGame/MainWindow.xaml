@@ -7,10 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <Grid>
-        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="51,247,0,0" VerticalAlignment="Top" Height="48" Width="107"/>
+        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="51,247,0,0" VerticalAlignment="Top" Height="48" Width="107" Click="btnPlay_Click"/>
         <Button x:Name="btnSeeScores" Content="See Scores" HorizontalAlignment="Left" Margin="190,322,0,0" VerticalAlignment="Top" Height="48" Width="107" />
         <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="50,320,0,0" VerticalAlignment="Top" Height="48" Width="107"/>
-        <Label x:Name="lblAntwoord" Content="Label" HorizontalAlignment="Left" Margin="50,35,0,0" VerticalAlignment="Top" Width="342" Height="40"/>
+        <Label Content="Naam: " HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Width="76"/>
+        <TextBox x:Name="TxtNaam"  HorizontalAlignment="Left" Margin="153,30,0,0" VerticalAlignment="Top" Width="342" Height="40"/>
+        <TextBox x:Name="TxtRounds"  HorizontalAlignment="Left" Margin="153,75,0,0" VerticalAlignment="Top" Width="342" Height="38"/>
+        <Label Content="Rounds" HorizontalAlignment="Left" Margin="50,75,0,0" VerticalAlignment="Top" Height="26" Width="75"/>
+        <TextBox x:Name="TxtSequencePattern" HorizontalAlignment="Left" Margin="50,149,0,0" VerticalAlignment="Top" Width="350" Height="24"/>
+        
 
 
     </Grid>
