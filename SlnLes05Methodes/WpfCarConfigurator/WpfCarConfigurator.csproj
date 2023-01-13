@@ -95,9 +95,15 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="images\model1_blauw.jpg" />
-    <Resource Include="images\model1_groen.jpg" />
-    <Resource Include="images\model1_rood.jpg" />
+    <Resource Include="images\model1_blauw.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\model1_groen.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="images\model1_rood.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
     <Resource Include="images\model2_blauw.jpg" />
     <Resource Include="images\model2_groen.jpg" />
     <Resource Include="images\model2_rood.jpg" />

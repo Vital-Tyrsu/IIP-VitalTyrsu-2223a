@@ -24,25 +24,92 @@ namespace WpfCarConfigurator
         {
             InitializeComponent();
         }
-
+        
         private void CmbModel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-        
+            
             if (CmbModel.SelectedIndex == 0)
             {
-                lblTotaalprijs.Content = 85000;
+                if (RadioBlauw.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model1_blauw.jpg", UriKind.Relative));
+                    int prijsBlauw = 85000;
+                    lblTotaalprijs.Content = Convert.ToString(prijsBlauw);
+                }
+                else if (RadioGroen.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model1_groen.jpg", UriKind.Relative));
+                    int prijsGroen = 85250;
+                    lblTotaalprijs.Content = Convert.ToString(prijsGroen);
+                }
+                else if (RadioRood.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model1_rood.jpg", UriKind.Relative));
+                    int prijsRood = 85700;
+                    lblTotaalprijs.Content = Convert.ToString(prijsRood);
+                }
             }
-
-            else if (CmbModel.SelectedIndex == 1)
+             else if (CmbModel.SelectedIndex == 1)
             {
-                lblTotaalprijs.Content = 72000;
+                if (RadioBlauw.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model2_blauw.jpg", UriKind.Relative));
+                    int prijsBlauw = 72000;
+                    lblTotaalprijs.Content = Convert.ToString(prijsBlauw);
+                }
+                else if (RadioGroen.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model2_groen.jpg", UriKind.Relative));
+                    int prijsGroen = 72250;
+                    lblTotaalprijs.Content = Convert.ToString(prijsGroen);
+                }
+                else if (RadioRood.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model2_rood.jpg", UriKind.Relative));
+                    int prijsRood = 72700;
+                    lblTotaalprijs.Content = Convert.ToString(prijsRood);
+                }
             }
-
             else if (CmbModel.SelectedIndex == 2)
             {
-                lblTotaalprijs.Content = 65300;
+                if (RadioBlauw.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model3_blauw.jpg", UriKind.Relative));
+                    int prijsBlauw = 65300;
+                    lblTotaalprijs.Content = Convert.ToString(prijsBlauw);
+                }
+                else if (RadioGroen.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model3_groen.jpg", UriKind.Relative));
+                    int prijsGroen = 65300 + 250;
+                    lblTotaalprijs.Content = Convert.ToString(prijsGroen);
+                }
+                else if (RadioRood.IsChecked == true)
+                {
+                    img.Source = new BitmapImage(new Uri("images/model3_rood.jpg", UriKind.Relative));
+                    int prijsRood = 65300 + 700;
+                    lblTotaalprijs.Content = Convert.ToString(prijsRood);
+                }
             }
+            
+        } 
 
+        private void RadioBlauw_Checked(object sender, RoutedEventArgs e)
+        {
+           
         }
+
+
+        private void RadioGroen_Checked(object sender, RoutedEventArgs e)
+        {
+            // code to update the image based on the selected color
+        }
+
+        private void RadioRood_Checked(object sender, RoutedEventArgs e)
+        {
+            // code to update the image based on the selected color
+        }
+
+
     }
 }

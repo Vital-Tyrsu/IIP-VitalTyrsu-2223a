@@ -11,15 +11,15 @@
         <Label Content="KLEUR" HorizontalAlignment="Left" Height="35" Margin="35,115,0,0" VerticalAlignment="Top" Width="130" FontWeight="Bold"/>
         <Label Content="ACCESSOIRES" HorizontalAlignment="Left" Height="35" Margin="35,220,0,0" VerticalAlignment="Top" Width="130" FontWeight="Bold"/>
         <Label Content="PRIJS" HorizontalAlignment="Left" Height="35" Margin="35,350,0,0" VerticalAlignment="Top" Width="130" FontWeight="Bold"/>
-        <ComboBox x:Name="CmbModel" HorizontalAlignment="Left" Height="35" Margin="190,60,0,0" VerticalAlignment="Top" Width="270" SelectedIndex="0" SelectionChanged="CmbModel_SelectionChanged">
+        <ComboBox x:Name="CmbModel" HorizontalAlignment="Left" Height="35" Margin="190,60,0,0" VerticalAlignment="Top" Width="270" SelectionChanged="CmbModel_SelectionChanged">
             <ComboBoxItem x:Name="CmbContinenal">Continental V8 (85000 euro)</ComboBoxItem>
             <ComboBoxItem x:Name="CmbConvertible">Convertible (72000 euro)</ComboBoxItem>
             <ComboBoxItem x:Name="CmbMulsanne">Mulsanne (65300 euro)</ComboBoxItem>
         </ComboBox>
 
-        <RadioButton x:Name="RadioBlauw" Content="Blauw" HorizontalAlignment="Left" Height="20" Margin="190,115,0,0" VerticalAlignment="Top" Width="105"/>
-        <RadioButton x:Name="RadioGroen" Content="Groen (+250 euro)" HorizontalAlignment="Left" Height="25" Margin="191,150,0,0" VerticalAlignment="Top" Width="135"/>
-        <RadioButton x:Name="RadioRood" Content="Rood (+700 euro)" HorizontalAlignment="Left" Height="20" Margin="190,130,0,0" VerticalAlignment="Top" Width="120"/>
+        <RadioButton x:Name="RadioBlauw" Content="Blauw" HorizontalAlignment="Left" Height="20" Margin="190,115,0,0" VerticalAlignment="Top" Width="105" Checked="RadioBlauw_Checked"/>
+        <RadioButton x:Name="RadioGroen" Content="Groen (+250 euro)" HorizontalAlignment="Left" Height="25" Margin="191,150,0,0" VerticalAlignment="Top" Width="135" Checked="RadioGroen_Checked"/>
+        <RadioButton x:Name="RadioRood" Content="Rood (+700 euro)" HorizontalAlignment="Left" Height="20" Margin="190,130,0,0" VerticalAlignment="Top" Width="120" Checked="RadioRood_Checked"/>
         <CheckBox x:Name="ChkAudio" Content="Bose audio speakers (+1250 euro)" HorizontalAlignment="Left" Height="20" Margin="190,220,0,0" VerticalAlignment="Top" Width="210" />
         <CheckBox x:Name="ChkMatjes" Content="Deluxe matjes (+450 euro)" HorizontalAlignment="Left" Height="20" Margin="190,240,0,0" VerticalAlignment="Top" Width="210"/>
         <CheckBox x:Name="ChkVelgen" Content="Aluminium velgen (+300 euro)" HorizontalAlignment="Left" Height="20" Margin="190,260,0,0" VerticalAlignment="Top" Width="210"/>
