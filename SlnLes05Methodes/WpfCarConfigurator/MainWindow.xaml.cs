@@ -27,7 +27,22 @@ namespace WpfCarConfigurator
 
         private void CmbModel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-          
+        
+            if (CmbModel.SelectedIndex == 0)
+            {
+                lblTotaalprijs.Content = 85000;
+            }
+
+            else if (CmbModel.SelectedIndex == 1)
+            {
+                lblTotaalprijs.Content = 72000;
+            }
+
+            else if (CmbModel.SelectedIndex == 2)
+            {
+                lblTotaalprijs.Content = 65300;
+            }
+
         }
     }
 }

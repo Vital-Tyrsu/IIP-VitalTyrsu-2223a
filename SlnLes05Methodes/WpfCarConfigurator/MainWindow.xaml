@@ -18,7 +18,7 @@
         </ComboBox>
 
         <RadioButton x:Name="RadioBlauw" Content="Blauw" HorizontalAlignment="Left" Height="20" Margin="190,115,0,0" VerticalAlignment="Top" Width="105"/>
-        <RadioButton x:Name="RadioGroen" Content="Groen (+250 euro)" HorizontalAlignment="Left" Height="25" Margin="191,149,0,0" VerticalAlignment="Top" Width="135"/>
+        <RadioButton x:Name="RadioGroen" Content="Groen (+250 euro)" HorizontalAlignment="Left" Height="25" Margin="191,150,0,0" VerticalAlignment="Top" Width="135"/>
         <RadioButton x:Name="RadioRood" Content="Rood (+700 euro)" HorizontalAlignment="Left" Height="20" Margin="190,130,0,0" VerticalAlignment="Top" Width="120"/>
         <CheckBox x:Name="ChkAudio" Content="Bose audio speakers (+1250 euro)" HorizontalAlignment="Left" Height="20" Margin="190,220,0,0" VerticalAlignment="Top" Width="210" />
         <CheckBox x:Name="ChkMatjes" Content="Deluxe matjes (+450 euro)" HorizontalAlignment="Left" Height="20" Margin="190,240,0,0" VerticalAlignment="Top" Width="210"/>
