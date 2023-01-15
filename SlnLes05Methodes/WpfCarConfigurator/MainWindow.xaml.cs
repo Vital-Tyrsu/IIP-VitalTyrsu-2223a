@@ -21,78 +21,41 @@ namespace WpfCarConfigurator
     public partial class MainWindow : Window
     {
         public MainWindow()
-        {
+
+        { 
+
             InitializeComponent();
+
         }
-        
+
+        public class CarData
+        {
+            public string ImagePath { get; set; }
+            public int Price { get; set; }
+        }
+
         private void CmbModel_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            
-            if (CmbModel.SelectedIndex == 0)
+            string selectedModel = CmbModel.SelectedItem.ToString();
+            string selectedColor = "";
+            if (RadioBlauw.IsChecked == true)
             {
-                if (RadioBlauw.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model1_blauw.jpg", UriKind.Relative));
-                    int prijsBlauw = 85000;
-                    lblTotaalprijs.Content = Convert.ToString(prijsBlauw);
-                }
-                else if (RadioGroen.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model1_groen.jpg", UriKind.Relative));
-                    int prijsGroen = 85250;
-                    lblTotaalprijs.Content = Convert.ToString(prijsGroen);
-                }
-                else if (RadioRood.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model1_rood.jpg", UriKind.Relative));
-                    int prijsRood = 85700;
-                    lblTotaalprijs.Content = Convert.ToString(prijsRood);
-                }
+                selectedColor = "Blauw";
             }
-             else if (CmbModel.SelectedIndex == 1)
+            else if (RadioGroen.IsChecked == true)
             {
-                if (RadioBlauw.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model2_blauw.jpg", UriKind.Relative));
-                    int prijsBlauw = 72000;
-                    lblTotaalprijs.Content = Convert.ToString(prijsBlauw);
-                }
-                else if (RadioGroen.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model2_groen.jpg", UriKind.Relative));
-                    int prijsGroen = 72250;
-                    lblTotaalprijs.Content = Convert.ToString(prijsGroen);
-                }
-                else if (RadioRood.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model2_rood.jpg", UriKind.Relative));
-                    int prijsRood = 72700;
-                    lblTotaalprijs.Content = Convert.ToString(prijsRood);
-                }
+                selectedColor = "Groen";
             }
-            else if (CmbModel.SelectedIndex == 2)
+            else if (RadioRood.IsChecked == true)
             {
-                if (RadioBlauw.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model3_blauw.jpg", UriKind.Relative));
-                    int prijsBlauw = 65300;
-                    lblTotaalprijs.Content = Convert.ToString(prijsBlauw);
-                }
-                else if (RadioGroen.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model3_groen.jpg", UriKind.Relative));
-                    int prijsGroen = 65300 + 250;
-                    lblTotaalprijs.Content = Convert.ToString(prijsGroen);
-                }
-                else if (RadioRood.IsChecked == true)
-                {
-                    img.Source = new BitmapImage(new Uri("images/model3_rood.jpg", UriKind.Relative));
-                    int prijsRood = 65300 + 700;
-                    lblTotaalprijs.Content = Convert.ToString(prijsRood);
-                }
+                selectedColor = "Rood";
             }
-            
-        } 
+            CarData carData = GetCarData(selectedModel, selectedColor);
+            img.Source = new BitmapImage(new Uri(carData.ImagePath, UriKind.Relative));
+            lblTotaalprijs.Content = carData.Price.ToString();
+        }
+
+
 
         private void RadioBlauw_Checked(object sender, RoutedEventArgs e)
         {
@@ -111,5 +74,65 @@ namespace WpfCarConfigurator
         }
 
 
+        private int GetCarData(string model, string color)
+        {
+            CarData carData = new CarData();
+            switch (model)
+            {
+                case "Model1":
+                    switch (color)
+                    {
+                        case "Blauw":
+                            carData.ImagePath = "images/model1_blauw.jpg";
+                            carData.Price = 85000;
+                            break;
+                        case "Groen":
+                            carData.ImagePath = "images/model1_groen.jpg";
+                            carData.Price = 85250;
+                            break;
+                        case "Rood":
+                            carData.ImagePath = "images/model1_rood.jpg";
+                            carData.Price = 85700;
+                            break;
+                    }
+                    break;
+                case "Model2":
+                    switch (color)
+                    {
+                        case "Blauw":
+                            carData.ImagePath = "images/model2_blauw.jpg";
+                            carData.Price = 72000;
+                            break;
+                        case "Groen":
+                            carData.ImagePath = "images/model2_groen.jpg";
+                            carData.Price = 72250;
+                            break;
+                        case "Rood":
+                            carData.ImagePath = "images/model2_rood.jpg";
+                            carData.Price = 72700;
+                            break;
+                    }
+                    break;
+                case "Model3":
+                    switch (color)
+                    {
+                        case "Blauw":
+                            carData.ImagePath = "images/model3_blauw.jpg";
+                            carData.Price = 65300;
+                            break;
+                        case "Groen":
+                            carData.ImagePath = "images/model3_groen.jpg";
+                            carData.Price = 65300 + 250;
+                            break;
+                        case "Rood":
+                            carData.ImagePath = "images/model3_rood.jpg";
+                            carData.Price = 65300 + 700;
+                            break;
+                    }
+                    break;
+            }
+            return carData;
+
+        }
+        }
     }
-}
