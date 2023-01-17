@@ -14,6 +14,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Resources;
+using System.Drawing;
 using System.IO;
 
 namespace WpfSequenceGame
@@ -33,42 +35,28 @@ namespace WpfSequenceGame
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            /*
-            TxtNaam.Text = Console.ReadLine();
-            int numRounds = Convert.ToInt32(TxtRounds.Text);
-
-            while (round <= numRounds)
+            if (!String.IsNullOrEmpty(TxtNaam.Text) && !String.IsNullOrEmpty(TxtRounds.Text))
             {
-                pattern.Add(random.Next(1, 5));
-                foreach (int color in pattern)
+                String naam = TxtNaam.Text;
+                int rounds = Convert.ToInt32(TxtRounds.Text);
+                game game = new game(naam, rounds);
+                game.Show();
+                this.Close();
+            }
+            else
+            {
+                if (String.IsNullOrEmpty(TxtNaam.Text))
                 {
-                    TxtSequencePattern.Text = (getAnimalName(color) + " ");
-                    System.Threading.Thread.Sleep(2000);
-                }
+                    TxtNaam.BorderBrush = Brushes.Red;
+                    TxtNaam.Background = Brushes.Red;
 
-                List<int> input = new List<int>();
-                while (input.Count < pattern.Count)
+                }
+                if (String.IsNullOrEmpty(TxtRounds.Text))
                 {
-                    string key = Console.ReadLine();
-                    if (key == "1")
-                    {
-                        input.Add(1);
-                    }
-                    else if (key == "2")
-                    {
-                        input.Add(2);
-                    }
-                    else if (key == "3")
-                    {
-                        input.Add(3);
-                    }
-                    else if (key == "4")
-                    {
-                        input.Add(4);
-                    }
+                    TxtRounds.BorderBrush = Brushes.Red;
+                    TxtRounds.Background = Brushes.Red;
                 }
             }
-            */
         }
 
 

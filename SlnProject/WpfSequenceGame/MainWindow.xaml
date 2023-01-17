@@ -5,17 +5,43 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSequenceGame"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        <Button x:Name="btnPlay" Content="Play" HorizontalAlignment="Left" Margin="51,247,0,0" VerticalAlignment="Top" Height="48" Width="107" Click="btnPlay_Click"/>
-        <Button x:Name="btnSeeScores" Content="See Scores" HorizontalAlignment="Left" Margin="190,322,0,0" VerticalAlignment="Top" Height="48" Width="107" Click="btnSeeScores_Click" />
-        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="50,320,0,0" VerticalAlignment="Top" Height="48" Width="107" Click="btnStop_Click"/>
-        <Label Content="Naam: " HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Width="76"/>
-        <TextBox x:Name="TxtNaam"  HorizontalAlignment="Left" Margin="153,30,0,0" VerticalAlignment="Top" Width="342" Height="40"/>
-        <TextBox x:Name="TxtRounds"  HorizontalAlignment="Left" Margin="153,75,0,0" VerticalAlignment="Top" Width="342" Height="38"/>
-        <Label Content="Rounds" HorizontalAlignment="Left" Margin="50,75,0,0" VerticalAlignment="Top" Height="26" Width="75"/>
-        <TextBox x:Name="TxtSequencePattern" HorizontalAlignment="Left" Margin="50,149,0,0" VerticalAlignment="Top" Width="350" Height="24"/>
+        Title="Sequence Spel" Height="450" Width="800">
+    <Grid Background="#FF0F1F2C">
+        <Button x:Name="btnPlay" Content="Play" Foreground="White" HorizontalAlignment="Left" Margin="315,167,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnPlay_Click" FontFamily="hooge 05_54">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                    <Setter Property="Background" Value="LightCoral"></Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+
+
+        <Button x:Name="btnSeeScores" Foreground="White" Content="See Scores" HorizontalAlignment="Left" Margin="315,250,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnSeeScores_Click" FontFamily="hooge 05_54">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                    <Setter Property="Background" Value="LightCoral"></Setter>
+                </Style>
+            </Button.Style>
+        </Button>
         
+        
+        <Button x:Name="btnStop" Content="Stop" Foreground="White" HorizontalAlignment="Left" Margin="315,330,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnStop_Click" FontFamily="hooge 05_54">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                    <Setter Property="Background" Value="LightCoral"></Setter>
+                </Style>
+            </Button.Style>
+        </Button>
+        
+        
+        <Label Content="Naam: " HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" FontSize="20" Foreground="LightGray" FontFamily="Cooper Black"/>
+        <TextBox x:Name="TxtNaam"  HorizontalAlignment="Left" Margin="150,30,0,0" VerticalAlignment="Top" Width="200" Height="30" FontSize="16" FontFamily="Cooper Black"/>
+        <TextBox x:Name="TxtRounds"  HorizontalAlignment="Left" Margin="150,75,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="16" FontFamily="Cooper Black"/>
+        <Label Content="Rounds:" HorizontalAlignment="Left" Margin="50,75,0,0" VerticalAlignment="Top" Height="40" Width="95" FontWeight="Bold" FontSize="20" Foreground="LightGray" FontFamily="Cooper Black"/>
+
 
 
     </Grid>

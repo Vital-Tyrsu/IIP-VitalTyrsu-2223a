@@ -130,14 +130,14 @@ c) spel eindigen");
                         {
                             // Display ronde nummer
                             Console.WriteLine($"Round {round}");
-
-                            // Nieuwe kleur toevoegen aan de pattern
+                            Console.Write("Your answer: ");
+                            // Nieuwe dier toevoegen aan de pattern
                             pattern.Add(random.Next(1, 5));
 
                             // De sequentie wordt zichtbaar
-                            foreach (int color in pattern)
+                            foreach (int animal in pattern)
                             {
-                                Console.Write(getAnimalName(color));
+                                Console.Write(getAnimalName(animal));
                                 Console.Write(" ");
                                 System.Threading.Thread.Sleep(2000);
                             }
@@ -170,15 +170,17 @@ c) spel eindigen");
                             if (input.SequenceEqual(pattern))
                             {
                                 playSound("sounds/correctAntwoord.wav");
-                                Console.WriteLine("");
+                                Console.WriteLine(" ");
+                                Console.Clear();
                                 Console.WriteLine("Correct!");
-
+                                ColorText();
                                 round++;
                             }
                             else
                             {
                                 playSound("sounds/gameover.wav");
-                                Console.WriteLine("Incorrect! Game over. Je maximale score was: " + round++);
+                                int r = round - 1;
+                                Console.WriteLine("Incorrect! Game over. Je maximale score was: " + r);
                                 break;
                             }
 
@@ -215,11 +217,6 @@ Bedankt en tot ziens!");
         }
 
 
-       /* private static void ClearCurrentConsoleLine() // aanpassen
-        {
-            Console.Write("\r" + new string(' ', Console.WindowWidth) + "\r");
-        }
-       */
 
         // Methode
         static string playSound(string sound)
