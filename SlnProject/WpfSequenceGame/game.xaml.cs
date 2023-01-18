@@ -29,9 +29,9 @@ namespace WpfSequenceGame
         int actualRound;
         List<int> input;
         int score = 0;
-        String naam;
+        string naam;
 
-        public game(String naam, int rounds)
+        public game(string naam, int rounds)
         {
             InitializeComponent();
             lblNaam.Content = "Welcome " + naam;
@@ -67,9 +67,10 @@ namespace WpfSequenceGame
             } 
         }
 
+
         private void btnAnswer_Click(object sender, RoutedEventArgs e)
         {
-            String[] txtSplit = TxtAnswer.Text.Split(' ');
+            string[] txtSplit = TxtAnswer.Text.Split(' ');
             if (txtSplit.Length != actualRound)
             {
                 TxtAnswer.BorderBrush = Brushes.Red;
@@ -77,9 +78,9 @@ namespace WpfSequenceGame
             }
             else
             {
-                if (!String.IsNullOrEmpty(TxtAnswer.Text))
+                if (!string.IsNullOrEmpty(TxtAnswer.Text))
                 {
-                    String[] txtSplit1 = TxtAnswer.Text.Split(' ');
+                    string[] txtSplit1 = TxtAnswer.Text.Split(' ');
                     for (int i = actualRound - 1; i < txtSplit.Length; i++)
                     {
                         input.Add(Convert.ToInt32(txtSplit[i]));
@@ -170,7 +171,7 @@ namespace WpfSequenceGame
             return " ";
         }
 
-        // Methode
+
         static void writeFile(string naam, int round)
         {
 

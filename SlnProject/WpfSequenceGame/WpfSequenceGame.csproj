@@ -110,6 +110,8 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Resource Include="images\sonOfRome.jpg" />
+    <Resource Include="images\wpfBackground.gif" />
     <Content Include="sounds\complete.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>

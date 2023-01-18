@@ -6,7 +6,10 @@
         xmlns:local="clr-namespace:WpfSequenceGame"
         mc:Ignorable="d"
         Title="Sequence Spel" Height="450" Width="800">
-    <Grid Background="#FF0F1F2C">
+    <Grid>
+        <Grid.Background>
+            <ImageBrush Stretch="Fill" ImageSource="/images/wpfBackground.gif"></ImageBrush>
+        </Grid.Background>
         <Button x:Name="btnPlay" Content="Play" Foreground="White" HorizontalAlignment="Left" Margin="315,167,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnPlay_Click" FontFamily="hooge 05_54">
             <Button.Style>
                 <Style TargetType="Button">
@@ -14,6 +17,11 @@
                     <Setter Property="Background" Value="LightCoral"></Setter>
                 </Style>
             </Button.Style>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </Button.Resources>
         </Button>
 
 
@@ -24,6 +32,11 @@
                     <Setter Property="Background" Value="LightCoral"></Setter>
                 </Style>
             </Button.Style>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </Button.Resources>
         </Button>
         
         
@@ -34,12 +47,29 @@
                     <Setter Property="Background" Value="LightCoral"></Setter>
                 </Style>
             </Button.Style>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </Button.Resources>
         </Button>
         
         
         <Label Content="Naam: " HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" FontSize="20" Foreground="LightGray" FontFamily="Cooper Black"/>
-        <TextBox x:Name="TxtNaam"  HorizontalAlignment="Left" Margin="150,30,0,0" VerticalAlignment="Top" Width="200" Height="30" FontSize="16" FontFamily="Cooper Black"/>
-        <TextBox x:Name="TxtRounds"  HorizontalAlignment="Left" Margin="150,75,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="16" FontFamily="Cooper Black"/>
+        <TextBox x:Name="TxtNaam"  HorizontalAlignment="Left" Margin="150,30,0,0" VerticalAlignment="Top" Width="200" Height="30" FontSize="16" FontFamily="Cooper Black">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
+        <TextBox x:Name="TxtRounds"  HorizontalAlignment="Left" Margin="150,75,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="16" FontFamily="Cooper Black">
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </TextBox.Resources>
+        </TextBox>
         <Label Content="Rounds:" HorizontalAlignment="Left" Margin="50,75,0,0" VerticalAlignment="Top" Height="40" Width="95" FontWeight="Bold" FontSize="20" Foreground="LightGray" FontFamily="Cooper Black"/>
 
 
