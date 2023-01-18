@@ -7,6 +7,7 @@ using System.Media;
 using System.IO;
 using System.Threading;
 using System.Data.SqlClient;
+using WMPLib;
 
 namespace SequenceSpel
 {
@@ -95,6 +96,7 @@ namespace SequenceSpel
 
         static void Main(string[] args)
         {
+
             char keuze = ' ';
 
             Console.WriteLine("Welkom in het spel !");
@@ -226,6 +228,11 @@ Bedankt en tot ziens!");
             player.Play();
             return " ";
         }
+
+        
+
+
+
 
         // Methode
         static string getAnimalName(int keuze)

@@ -15,6 +15,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Resources;
+using WMPLib;
 using System.Drawing;
 using System.IO;
 
@@ -25,19 +26,26 @@ namespace WpfSequenceGame
     /// </summary>
     public partial class MainWindow : Window
     {
-        public MainWindow(){
+        public MainWindow()
+        {
             InitializeComponent();
+            playSoundtrack("soundtrack/lifeStrange.mp3");
+            
         }
-
+        
         Random random = new Random();
         List<int> pattern = new List<int>();
         int round = 1;
+        
+
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrEmpty(TxtNaam.Text) && !String.IsNullOrEmpty(TxtRounds.Text))
+           
+
+            if (!string.IsNullOrEmpty(TxtNaam.Text) && !string.IsNullOrEmpty(TxtRounds.Text))
             {
-                String naam = TxtNaam.Text;
+                string naam = TxtNaam.Text;
                 int rounds = Convert.ToInt32(TxtRounds.Text);
                 game game = new game(naam, rounds);
                 game.Show();
@@ -45,18 +53,26 @@ namespace WpfSequenceGame
             }
             else
             {
-                if (String.IsNullOrEmpty(TxtNaam.Text))
+                if (string.IsNullOrEmpty(TxtNaam.Text))
                 {
                     TxtNaam.BorderBrush = Brushes.Red;
                     TxtNaam.Background = Brushes.Red;
 
                 }
-                if (String.IsNullOrEmpty(TxtRounds.Text))
+                if (string.IsNullOrEmpty(TxtRounds.Text))
                 {
                     TxtRounds.BorderBrush = Brushes.Red;
                     TxtRounds.Background = Brushes.Red;
                 }
             }
+        }
+
+        static void playSoundtrack(string soundtrack)
+        {
+            string path = System.IO.Path.Combine(Environment.CurrentDirectory, soundtrack);
+            WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
+            player.URL = path;
+            player.controls.play();
         }
 
 
