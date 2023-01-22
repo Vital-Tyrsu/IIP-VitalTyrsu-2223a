@@ -88,7 +88,7 @@ namespace WpfSequenceGame
 
                     if (input.SequenceEqual(pattern))
                     {
-                        playSound("sounds/correctAntwoord.wav");
+                        PlaySound("sounds/correctAntwoord.wav");
                         lblCheck.Content = "Correct!";
                         actualRound++;
                         lblRound.Content = "Actual Round: " + actualRound;
@@ -105,7 +105,8 @@ namespace WpfSequenceGame
                     }
                     else
                     {
-                        playSound("sounds/gameover.wav");
+                        PlaySound("sounds/gameover.wav");
+                       
                         lblCheck.Content = "Incorrect! Game over. Je maximale score was: " + score;
                         btnAnswer.IsEnabled = false;
                         btnStart.IsEnabled = false;
@@ -113,7 +114,7 @@ namespace WpfSequenceGame
 
                     if (actualRound > numRounds)
                     {
-                        playSound("sounds/complete.wav");
+                        PlaySound("sounds/complete.wav");
                         lblCheck.Content = "Je hebt gewonnen! ";
                         btnAnswer.IsEnabled = false;
                         btnStart.IsEnabled = false;
@@ -146,24 +147,24 @@ namespace WpfSequenceGame
         {
             if (keuze == 1)
             {
-                return playSound("sounds/hond.wav");
+                return PlaySound("sounds/hond.wav");
             }
             else if (keuze == 2)
             {
-                return playSound("sounds/koe.wav");
+                return PlaySound("sounds/koe.wav");
             }
             else if (keuze == 3)
             {
-                return playSound("sounds/kuikentje.wav");
+                return PlaySound("sounds/kuikentje.wav");
             }
             else
             {
-                return playSound("sounds/paard.wav");
+                return PlaySound("sounds/paard.wav");
             }
         }
 
 
-        static string playSound(string sound)
+        static string PlaySound(string sound)
         {
             string path = System.IO.Path.Combine(Environment.CurrentDirectory, sound);
             SoundPlayer player = new SoundPlayer(path);

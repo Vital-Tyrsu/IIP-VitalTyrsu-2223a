@@ -114,9 +114,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="soundtrack\lifeStrange.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
     <Content Include="sounds\lifeStrange.wav">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
