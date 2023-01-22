@@ -29,52 +29,41 @@ namespace WpfSequenceGame
         public MainWindow()
         {
             InitializeComponent();
-            playSoundtrack("soundtrack/lifeStrange.mp3");
-            
+            playSound("sounds/lifeStrange.wav");
         }
-        
+
         Random random = new Random();
         List<int> pattern = new List<int>();
         int round = 1;
-        
-
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
-           
-
             if (!string.IsNullOrEmpty(TxtNaam.Text) && !string.IsNullOrEmpty(TxtRounds.Text))
             {
                 string naam = TxtNaam.Text;
                 int rounds = Convert.ToInt32(TxtRounds.Text);
                 game game = new game(naam, rounds);
                 game.Show();
-                this.Close();
+                this.Close(); // mainwindow sluiten
             }
             else
             {
                 if (string.IsNullOrEmpty(TxtNaam.Text))
                 {
-                    TxtNaam.BorderBrush = Brushes.Red;
-                    TxtNaam.Background = Brushes.Red;
+                    TxtNaam.BorderBrush = Brushes.IndianRed;
+                    TxtNaam.Background = Brushes.IndianRed;
+                    lblAlertNaam.Content = "Naam moet ingevuld zijn!";
 
                 }
+
                 if (string.IsNullOrEmpty(TxtRounds.Text))
                 {
-                    TxtRounds.BorderBrush = Brushes.Red;
-                    TxtRounds.Background = Brushes.Red;
+                    TxtRounds.BorderBrush = Brushes.IndianRed;
+                    TxtRounds.Background = Brushes.IndianRed;
+                    lblAlertRound.Content = "Aantal rounds moet ingevuld worden";
                 }
             }
         }
-
-        static void playSoundtrack(string soundtrack)
-        {
-            string path = System.IO.Path.Combine(Environment.CurrentDirectory, soundtrack);
-            WMPLib.WindowsMediaPlayer player = new WMPLib.WindowsMediaPlayer();
-            player.URL = path;
-            player.controls.play();
-        }
-
 
         static string playSound(string sound)
         {
@@ -159,6 +148,73 @@ namespace WpfSequenceGame
         {
             Environment.Exit(0);
 
+        }
+
+        private void TxtNaam_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (string.IsNullOrEmpty(TxtNaam.Text))
+            {
+                TxtNaam.BorderBrush = Brushes.IndianRed;
+                TxtNaam.Background = Brushes.IndianRed;
+                lblAlertNaam.Content = "Naam moet ingevuld zijn!";
+
+            }
+            else if (TxtNaam.Text.Any(ch => char.IsDigit(ch)))
+            {
+                TxtRounds.BorderBrush = Brushes.IndianRed;
+                TxtRounds.Background = Brushes.IndianRed;
+                lblAlertNaam.Content = "Naam mag geen getal bevatten";
+            }
+            else
+            {
+                TxtNaam.Background = Brushes.LightGreen;
+                TxtNaam.BorderBrush = Brushes.LightGreen;
+                lblAlertNaam.Content = "";
+            }
+        }
+
+        private void TxtRounds_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+            if (string.IsNullOrEmpty(TxtRounds.Text))
+            {
+                TxtRounds.BorderBrush = Brushes.IndianRed;
+                TxtRounds.Background = Brushes.IndianRed;
+                lblAlertRound.Content = "Aantal rounds moet ingevuld worden";
+            }
+            else if (TxtRounds.Text.Any(ch => !char.IsDigit(ch)))
+            {
+                TxtRounds.BorderBrush = Brushes.IndianRed;
+                TxtRounds.Background = Brushes.IndianRed;
+                lblAlertRound.Content = "Aantal rounds mag geen letter zijn";
+            }
+
+            else
+            {
+                TxtRounds.Background = Brushes.LightGreen;
+                TxtRounds.BorderBrush = Brushes.LightGreen;
+                lblAlertRound.Content = "";
+            }
+        }
+
+        private void btnMute_Click(object sender, RoutedEventArgs e)
+        {
+            SoundPlayer muziek = new SoundPlayer();
+            playSound("sounds/lifeStrange.wav");
+            muziek.Stop();
+
+            btnMute.Visibility = Visibility.Hidden;
+            btnUnmute.Visibility = Visibility.Visible;
+        }
+
+        private void btnUnmute_Click(object sender, RoutedEventArgs e)
+        {
+            SoundPlayer muziek = new SoundPlayer();
+            playSound("sounds/lifeStrange.wav");
+            muziek.Play();
+
+            btnUnmute.Visibility = Visibility.Hidden;
+            btnMute.Visibility = Visibility.Visible;
         }
     }
 }

@@ -3,16 +3,15 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:WpfSequenceGame"
         mc:Ignorable="d"
         Title="game" Height="450" Width="800">
     <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="/images/wpfBackground.gif"></ImageBrush>
-        </Grid.Background>
-        <Label x:Name="lblRound" Content="Actual round: " HorizontalAlignment="Left" Margin="40,115,0,0" VerticalAlignment="Top" Width="235" Foreground="White" FontSize="16" FontFamily="Cooper Black"/>
-        <Label x:Name="lblNaam" Content="Welkom" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="330" FontSize="30" Foreground="White" FontFamily="Cooper Black"/>
-        <Button x:Name="btnStart" Content="Start" HorizontalAlignment="Left" Margin="665,300,0,0" VerticalAlignment="Top" Width="90" Height="35" Click="btnStart_Click" Background="LightCoral">
+        <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Width="800" Height="450"/>
+        <Label x:Name="lblRound" Content="Actual round: " HorizontalAlignment="Left" Margin="40,115,0,0" VerticalAlignment="Top" Width="235" Foreground="#FFECD6B9" FontSize="16" FontFamily="hooge 05_54" Height="30"/>
+        <Label x:Name="lblNaam" Content="Welkom" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="330" FontSize="30" Foreground="#FFECD6B9" FontFamily="hooge 05_54"/>
+        <Button x:Name="btnStart" Foreground="White" FontFamily="hooge 05_54" Content="Start" HorizontalAlignment="Left" Margin="665,300,0,0" VerticalAlignment="Top" Width="90" Height="35" Click="btnStart_Click" Background="#FFD1450A">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="7"></Setter>
@@ -20,7 +19,7 @@
             </Button.Resources>
         </Button>
 
-        <Button x:Name="btnAnswer" Content="Answer" HorizontalAlignment="Center" Margin="0,261,0,0" VerticalAlignment="Top" Height="35" Width="88" Click="btnAnswer_Click">
+        <Button x:Name="btnAnswer" Foreground="white" Content="Answer" FontFamily="hooge 05_54" HorizontalAlignment="Center" Margin="0,264,0,0" VerticalAlignment="Top" Height="35" Width="90" Click="btnAnswer_Click" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
@@ -34,11 +33,10 @@
             </Button.Resources>
         </Button>
 
-        <Button x:Name="btnStop" Content="Stop" HorizontalAlignment="Left" Margin="665,356,0,0" VerticalAlignment="Top" Height="36" Width="93" Click="btnStop_Click">
+        <Button x:Name="btnStop" Foreground="White" FontFamily="hooge 05_54" Content="Stop" HorizontalAlignment="Left" Margin="665,356,0,0" VerticalAlignment="Top" Height="36" Width="93" Click="btnStop_Click" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
-                    <Setter Property="Background" Value="LightCoral"></Setter>
                 </Style>
             </Button.Style>
             <Button.Resources>
@@ -49,7 +47,7 @@
             </Button.Resources>
         </Button>
 
-        <Label Content="Your Answer: " HorizontalAlignment="Left" Margin="110,265,0,0" VerticalAlignment="Top" Width="101" RenderTransformOrigin="0.5,0.5" Foreground="#FFEADDDD" Height="30">
+        <Label Content="Je antwoord: " HorizontalAlignment="Left" Margin="90,265,0,0" VerticalAlignment="Top" Width="130" RenderTransformOrigin="0.5,0.5" Foreground="#FFECD6B9" Height="30" FontFamily="hooge 05_54">
             <Label.RenderTransform>
                 <TransformGroup>
                     <ScaleTransform/>
@@ -59,10 +57,20 @@
                 </TransformGroup>
             </Label.RenderTransform>
         </Label>
-        <TextBox x:Name="TxtAnswer" HorizontalAlignment="Left" Margin="215,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120"/>
-        <TextBlock HorizontalAlignment="Left" Margin="630,70,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="90" Width="160" Foreground="White"> Mogelijke antwoorden:<LineBreak/>1= Hond <LineBreak/>2= koe <LineBreak/>3= kuiken <LineBreak/>4= paard</TextBlock>
+        <TextBox x:Name="TxtAnswer" HorizontalAlignment="Left" Margin="215,270,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="120" Height="20" Background="#FFF19E37" FontFamily="hooge 05_54" FontSize="14" >
+            <TextBox.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style> 
+            </TextBox.Resources>
+        </TextBox>
+        <Viewbox HorizontalAlignment="Left" Margin="630,10,0,0" VerticalAlignment="Top" Height="105" Width="160" Stretch="Fill">
+            <Border BorderThickness="10,10,10,10" BorderBrush= "#602e02">
+            <TextBlock Padding="10,10,10,10" TextWrapping="Wrap" Background="#FFF19E37" Foreground="#FFECD6B9" FontFamily="hooge 05_54" RenderTransformOrigin="0.5,0.5" Height="105" Width="160"><Run Text="Mogelijke antwoorden:"/><LineBreak/><Run Text="1= Hond"/><LineBreak/><Run Text="2= koe"/><LineBreak/><Run Text="3= kuiken"/><LineBreak/><Run Text="4= paard"/></TextBlock>
+            </Border>
+        </Viewbox>
         <Label x:Name="lblAntwoorden" Content="Label" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" Width="220" Foreground="White" Visibility="Hidden"/>
-        <Label x:Name="lblCheck" Content="Please enter your answer " HorizontalAlignment="Left" Margin="10,310,0,0" VerticalAlignment="Top" Width="220" Foreground="#FFECE4E4"/>
+        <Label x:Name="lblCheck" Content="Voer je &#xD;&#xA;antwoord in" HorizontalAlignment="Left" Margin="371,177,0,0" VerticalAlignment="Top" Width="300" Foreground="#FFECD6B9" FontFamily="hooge 05_55"/>
 
 
     </Grid>

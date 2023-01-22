@@ -3,18 +3,17 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:local="clr-namespace:WpfSequenceGame"
         mc:Ignorable="d"
         Title="Sequence Spel" Height="450" Width="800">
+
     <Grid>
-        <Grid.Background>
-            <ImageBrush Stretch="Fill" ImageSource="/images/wpfBackground.gif"></ImageBrush>
-        </Grid.Background>
-        <Button x:Name="btnPlay" Content="Play" Foreground="White" HorizontalAlignment="Left" Margin="315,167,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnPlay_Click" FontFamily="hooge 05_54">
+        <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Width="800" Height="450"/>
+        <Button x:Name="btnPlay" Content="Play" Foreground="White" HorizontalAlignment="Left" Margin="140,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnPlay_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
-                    <Setter Property="Background" Value="LightCoral"></Setter>
                 </Style>
             </Button.Style>
             <Button.Resources>
@@ -25,11 +24,10 @@
         </Button>
 
 
-        <Button x:Name="btnSeeScores" Foreground="White" Content="See Scores" HorizontalAlignment="Left" Margin="315,250,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnSeeScores_Click" FontFamily="hooge 05_54">
+        <Button x:Name="btnSeeScores" Foreground="White" Content="See Scores" HorizontalAlignment="Left" Margin="350,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnSeeScores_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
-                    <Setter Property="Background" Value="LightCoral"></Setter>
                 </Style>
             </Button.Style>
             <Button.Resources>
@@ -38,13 +36,12 @@
                 </Style>
             </Button.Resources>
         </Button>
-        
-        
-        <Button x:Name="btnStop" Content="Stop" Foreground="White" HorizontalAlignment="Left" Margin="315,330,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnStop_Click" FontFamily="hooge 05_54">
+
+
+        <Button x:Name="btnStop" Content="Stop" Foreground="White" HorizontalAlignment="Left" Margin="550,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnStop_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
-                    <Setter Property="Background" Value="LightCoral"></Setter>
                 </Style>
             </Button.Style>
             <Button.Resources>
@@ -53,24 +50,42 @@
                 </Style>
             </Button.Resources>
         </Button>
-        
-        
-        <Label Content="Naam: " HorizontalAlignment="Left" Margin="50,30,0,0" VerticalAlignment="Top" Width="75" FontWeight="Bold" FontSize="20" Foreground="LightGray" FontFamily="Cooper Black"/>
-        <TextBox x:Name="TxtNaam"  HorizontalAlignment="Left" Margin="150,30,0,0" VerticalAlignment="Top" Width="200" Height="30" FontSize="16" FontFamily="Cooper Black">
+
+
+        <Label Content="NAAM:" HorizontalAlignment="Left" Margin="355,10,0,0" VerticalAlignment="Top" Width="87" FontWeight="Bold" FontSize="20" Foreground="#FFECD6B9" FontFamily="hooge 05_54"/>
+        <TextBox x:Name="TxtNaam"  HorizontalAlignment="Center" Margin="0,46,0,0" VerticalAlignment="Top" Width="200" Height="30" FontSize="16" FontFamily="hooge 05_54" Background="#FFF19E37" TextAlignment="Center" TextChanged="TxtNaam_TextChanged">
             <TextBox.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="7"></Setter>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <TextBox x:Name="TxtRounds"  HorizontalAlignment="Left" Margin="150,75,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="16" FontFamily="Cooper Black">
+        <TextBox x:Name="TxtRounds"  HorizontalAlignment="Center" Margin="0,121,0,0" VerticalAlignment="Top" Width="100" Height="30" FontSize="16" FontFamily="hooge 05_54" Background="#FFF19E37" TextAlignment="Center" TextChanged="TxtRounds_TextChanged">
             <TextBox.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="7"></Setter>
                 </Style>
             </TextBox.Resources>
         </TextBox>
-        <Label Content="Rounds:" HorizontalAlignment="Left" Margin="50,75,0,0" VerticalAlignment="Top" Height="40" Width="95" FontWeight="Bold" FontSize="20" Foreground="LightGray" FontFamily="Cooper Black"/>
+        <Label Content="ROUNDS:" HorizontalAlignment="Left" Margin="345,81,0,0" VerticalAlignment="Top" Height="40" Width="115" FontWeight="Bold" FontSize="20" Foreground="#FFECD6B9" FontFamily="hooge 05_54"/>
+        <Label x:Name="lblAlertNaam"  HorizontalAlignment="Left" Margin="505,46,0,0" VerticalAlignment="Top" Width="285" FontFamily="hooge 05_54" Foreground="#FFECD6B9" Height="40" FontSize="10"/>
+        <Label x:Name="lblAlertRound"  HorizontalAlignment="Left" Margin="450,111,0,0" VerticalAlignment="Top" Width="340" FontFamily="hooge 05_54" Foreground="#FFECD6B9" Height="50" FontSize="10"/>
+
+        <Button x:Name="btnUnmute" Content="Unmute" HorizontalAlignment="Left" Margin="720,380,0,0" VerticalAlignment="Top" Width="50" Click="btnUnmute_Click" Foreground="WhiteSmoke" Background="#FFD1450A">
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
+        <Button x:Name="btnMute" Foreground="WhiteSmoke" Content="mute" HorizontalAlignment="Left" Margin="720,380,0,0" VerticalAlignment="Top" Width="50" Height="20" Click="btnMute_Click" Background="#FFD1450A">
+          
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
 
 
 

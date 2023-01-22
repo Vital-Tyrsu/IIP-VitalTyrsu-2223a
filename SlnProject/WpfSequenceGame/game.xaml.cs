@@ -14,7 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 using System.Windows.Resources;
-
+using System.Threading;
 
 namespace WpfSequenceGame
 {
@@ -91,11 +91,11 @@ namespace WpfSequenceGame
                         playSound("sounds/correctAntwoord.wav");
                         lblCheck.Content = "Correct!";
                         actualRound++;
-                        lblRound.Content = "Actual Round" + actualRound;
+                        lblRound.Content = "Actual Round: " + actualRound;
                         if (actualRound > numRounds)
                         {
                             int r = actualRound - 1;
-                            lblRound.Content = "Actual Round" + r;
+                            lblRound.Content = "Actual Round: " + r;
                         }
 
                         score++;
@@ -117,7 +117,7 @@ namespace WpfSequenceGame
                         lblCheck.Content = "Je hebt gewonnen! ";
                         btnAnswer.IsEnabled = false;
                         btnStart.IsEnabled = false;
-                        writeFile(this.naam, numRounds);
+                        WriteFile(this.naam, numRounds);
                     }
 
                     TxtAnswer.Clear();
@@ -138,7 +138,7 @@ namespace WpfSequenceGame
             MainWindow main = new MainWindow();
             main.Show();
             this.Close();
-            //Visibility = Visibility.Hidden;
+            
         }
 
 
@@ -172,7 +172,7 @@ namespace WpfSequenceGame
         }
 
 
-        static void writeFile(string naam, int round)
+        static void WriteFile(string naam, int round)
         {
 
             FileStream fs = File.Open("score.txt", FileMode.Append);
@@ -184,6 +184,23 @@ namespace WpfSequenceGame
             }
         }
 
-       
+
+        /*
+        private void TxtAnswer_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+            if (!TxtAnswer.Text.Any(char.IsWhiteSpace))
+            {
+                TxtAnswer.Background = Brushes.IndianRed;
+                lblCheck.Content = "Je moet een spatie houden tussen elk getal!";
+                
+            }
+            else
+            {
+                TxtAnswer.Background = Brushes.LightGreen;
+                lblCheck.Content = "";
+            }
+        }
+        */
     }
 }
