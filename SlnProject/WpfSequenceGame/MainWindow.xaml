@@ -9,7 +9,7 @@
         Title="Sequence Spel" Height="450" Width="800">
 
     <Grid>
-        <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Width="800" Height="450"/>
+        <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Stretch="Fill"/>
         <Button x:Name="btnPlay" Content="Play" Foreground="White" HorizontalAlignment="Left" Margin="140,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnPlay_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
