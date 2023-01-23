@@ -9,9 +9,9 @@
         Title="game" Height="450" Width="800">
     <Grid>
         <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Stretch="Fill"/>
-        <Label x:Name="lblRound" Content="Actual round: " HorizontalAlignment="Left" Margin="40,115,0,0" VerticalAlignment="Top" Width="235" Foreground="#FFECD6B9" FontSize="16" FontFamily="hooge 05_54" Height="30"/>
+        <Label x:Name="lblRound" Content="Actual round: " HorizontalAlignment="Left" Margin="40,115,0,0" VerticalAlignment="Top" Width="235" Foreground="#FFECD6B9" FontSize="18" FontFamily="hooge 05_54" Height="30"/>
         <Label x:Name="lblNaam" Content="Welkom" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="540" FontSize="30" Foreground="#FFECD6B9" FontFamily="hooge 05_54"/>
-        <Button x:Name="btnStart" Foreground="White" FontFamily="hooge 05_54" Content="Start" HorizontalAlignment="Left" Margin="665,300,0,0" VerticalAlignment="Top" Width="90" Height="35" Click="btnStart_Click" Background="#FFD1450A">
+        <Button x:Name="btnStart" Foreground="White" FontFamily="hooge 05_54" Content="Start" HorizontalAlignment="Left" Margin="665,300,0,0" VerticalAlignment="Top" Width="90" Height="35" Click="BtnStart_Click" Background="#FFD1450A">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="7"></Setter>
@@ -19,7 +19,7 @@
             </Button.Resources>
         </Button>
 
-        <Button x:Name="btnAnswer" Foreground="white" Content="Answer" FontFamily="hooge 05_54" HorizontalAlignment="Left" Margin="310,260,0,0" VerticalAlignment="Top" Height="36" Width="90" Click="btnAnswer_Click" Background="#FFD1450A">
+        <Button x:Name="btnAnswer" Foreground="white" Content="Answer" FontFamily="hooge 05_54" HorizontalAlignment="Left" Margin="310,260,0,0" VerticalAlignment="Top" Height="36" Width="90" Click="BtnAnswer_Click" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
@@ -33,7 +33,7 @@
             </Button.Resources>
         </Button>
 
-        <Button x:Name="btnStop" Foreground="White" FontFamily="hooge 05_54" Content="Stop" HorizontalAlignment="Left" Margin="665,356,0,0" VerticalAlignment="Top" Height="36" Width="93" Click="btnStop_Click" Background="#FFD1450A">
+        <Button x:Name="btnStop" Foreground="White" FontFamily="hooge 05_54" Content="Stop" HorizontalAlignment="Left" Margin="665,356,0,0" VerticalAlignment="Top" Height="36" Width="93" Click="BtnStop_Click" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
@@ -69,8 +69,10 @@
                 <TextBlock Padding="10,10,10,10" TextWrapping="Wrap" Background="#FFF19E37" Foreground="#FFECD6B9" FontFamily="hooge 05_54" RenderTransformOrigin="0.5,0.5" Height="105" Width="160"><Run Text="Mogelijke antwoorden:"/><LineBreak/><Run Text="1= Hond"/><LineBreak/><Run Text="2= koe"/><LineBreak/><Run Text="3= kuiken"/><LineBreak/><Run Text="4= paard"/></TextBlock>
             </Border>
         </Viewbox>
-        <Label x:Name="lblAntwoorden" Content="Label" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" Width="220" Foreground="White" Visibility="Hidden"/>
-        <Label x:Name="lblCheck" Content="Voer je &#xD;&#xA;antwoord in" HorizontalAlignment="Left" Margin="371,177,0,0" VerticalAlignment="Top" Width="419" Foreground="#FFECD6B9" FontFamily="hooge 05_55"/>
+        <Label x:Name="lblAntwoorden" Content="Label" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" Width="220" Foreground="#FFECD6B9" Visibility="Hidden"/>
+        <Label x:Name="lblCheck" Content="Voer je antwoord in" HorizontalAlignment="Left" Margin="370,175,0,0" VerticalAlignment="Top" Width="150" Foreground="#FFECD6B9" FontFamily="hooge 05_55"/>
+        <Label x:Name="lblFout" HorizontalAlignment="Left" Margin="545,245,0,0" VerticalAlignment="Top" Width="190" FontFamily="hooge 05_55" Foreground="#FFECD6B9"/>
+        <Button x:Name="btnHoeSpelen" Content="Hoe spelen?" HorizontalAlignment="Left" Margin="261,374,0,0" VerticalAlignment="Top" Background="#FFD1450A" Foreground="White" Width="95" Height="20" Click="BtnHoeSpelen_Click" FontFamily="hooge 05_55"/>
 
 
     </Grid>

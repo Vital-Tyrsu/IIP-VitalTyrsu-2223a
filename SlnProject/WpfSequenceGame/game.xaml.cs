@@ -43,22 +43,20 @@ namespace WpfSequenceGame
             lblRound.Content = "Actual round: " + actualRound;
             input = new List<int>();
             btnAnswer.IsEnabled = false;
-
-
+            
         }
 
 
-        private void btnStart_Click(object sender, RoutedEventArgs e)
-        {
-           
+        private void BtnStart_Click(object sender, RoutedEventArgs e)
+        { 
             if (actualRound <= numRounds)
             {
                 pattern.Add(random.Next(1, 5));
 
                 // De sequentie wordt zichtbaar
-                foreach (int color in pattern)
+                foreach (int name in pattern)
                 {
-                    lblAntwoorden.Content = (getAnimalName(color));
+                    lblAntwoorden.Content = GetAnimalName(name);
                     System.Threading.Thread.Sleep(2000);
                 }
 
@@ -68,13 +66,13 @@ namespace WpfSequenceGame
         }
 
 
-        private void btnAnswer_Click(object sender, RoutedEventArgs e)
+        private void BtnAnswer_Click(object sender, RoutedEventArgs e)
         {
             string[] txtSplit = TxtAnswer.Text.Split(' ');
             if (txtSplit.Length != actualRound)
             {
-                TxtAnswer.BorderBrush = Brushes.Red;
-                TxtAnswer.Background = Brushes.Red;
+                TxtAnswer.BorderBrush = Brushes.IndianRed;
+                TxtAnswer.Background = Brushes.IndianRed;
             }
             else
             {
@@ -106,8 +104,9 @@ namespace WpfSequenceGame
                     else
                     {
                         PlaySound("sounds/gameover.wav");
-                       
-                        lblCheck.Content = "Incorrect! Game over. Je maximale score was: " + score;
+
+                        lblCheck.Content = "Incorrect!";
+                        lblFout.Content = $"Game over! Je score was: {score}";
                         btnAnswer.IsEnabled = false;
                         btnStart.IsEnabled = false;
                     }
@@ -125,15 +124,15 @@ namespace WpfSequenceGame
                 }
                 else
                 {
-                    TxtAnswer.BorderBrush = Brushes.Red;
-                    TxtAnswer.Background = Brushes.Red;
+                    TxtAnswer.BorderBrush = Brushes.IndianRed;
+                    TxtAnswer.Background = Brushes.IndianRed;
                 }
 
             }
         }
 
 
-        private void btnStop_Click(object sender, RoutedEventArgs e)
+        private void BtnStop_Click(object sender, RoutedEventArgs e)
         {
            
             MainWindow main = new MainWindow();
@@ -143,7 +142,7 @@ namespace WpfSequenceGame
         }
 
 
-        static string getAnimalName(int keuze)
+        static string GetAnimalName(int keuze)
         {
             if (keuze == 1)
             {
@@ -185,23 +184,9 @@ namespace WpfSequenceGame
             }
         }
 
-
-        /*
-        private void TxtAnswer_TextChanged(object sender, TextChangedEventArgs e)
+        private void BtnHoeSpelen_Click(object sender, RoutedEventArgs e)
         {
-            
-            if (!TxtAnswer.Text.Any(char.IsWhiteSpace))
-            {
-                TxtAnswer.Background = Brushes.IndianRed;
-                lblCheck.Content = "Je moet een spatie houden tussen elk getal!";
-                
-            }
-            else
-            {
-                TxtAnswer.Background = Brushes.LightGreen;
-                lblCheck.Content = "";
-            }
+            MessageBox.Show("Voer je antwoord in aan de hand van de dieren die je hoort. Elk dier staat gelijk aan een getal (zie bovenrechts), deze sequentie voer je dan telkens in met behulp van een spatie. Veel Succes!");
         }
-        */
     }
 }

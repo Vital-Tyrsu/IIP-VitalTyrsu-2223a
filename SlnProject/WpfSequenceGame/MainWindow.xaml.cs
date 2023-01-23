@@ -16,7 +16,6 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Resources;
 using WMPLib;
-using System.Drawing;
 using System.IO;
 
 namespace WpfSequenceGame
@@ -37,7 +36,7 @@ namespace WpfSequenceGame
         List<int> pattern = new List<int>();
         int round = 1;
 
-        private void btnPlay_Click(object sender, RoutedEventArgs e)
+        private void BtnPlay_Click(object sender, RoutedEventArgs e)
         {
             
             if (!string.IsNullOrEmpty(TxtNaam.Text) && !string.IsNullOrEmpty(TxtRounds.Text))
@@ -47,7 +46,6 @@ namespace WpfSequenceGame
                 game game = new game(naam, rounds);
                 game.Show();
                 playSound("sounds/correct.wav");
-                MessageBox.Show(MessageBoxImage()+"Voer je antwoord in aan de hand van de dieren die je hoort. Elk dier staat gelijk aan een getal (zie bovenrechts), deze sequentie voer je dan telkens in met behulp van een spatie. Veel Succes!");
                 this.Close(); // mainwindow sluiten
             }
             else
@@ -98,7 +96,7 @@ namespace WpfSequenceGame
             }
         }
 
-        private void btnSeeScores_Click(object sender, RoutedEventArgs e)
+        private void BtnSeeScores_Click(object sender, RoutedEventArgs e)
         {
             score score = new score();
             readFile(score.lstNames);
@@ -148,7 +146,7 @@ namespace WpfSequenceGame
             }
         }
 
-        private void btnStop_Click(object sender, RoutedEventArgs e)
+        private void BtnStop_Click(object sender, RoutedEventArgs e)
         {
             Environment.Exit(0);
 
@@ -201,7 +199,7 @@ namespace WpfSequenceGame
             }
         }
 
-        private void btnMute_Click(object sender, RoutedEventArgs e)
+        private void BtnMute_Click(object sender, RoutedEventArgs e)
         {
             SoundPlayer muziek = new SoundPlayer();
             playSound("sounds/lifeStrange.wav");
@@ -211,7 +209,7 @@ namespace WpfSequenceGame
             btnUnmute.Visibility = Visibility.Visible;
         }
 
-        private void btnUnmute_Click(object sender, RoutedEventArgs e)
+        private void BtnUnmute_Click(object sender, RoutedEventArgs e)
         {
             SoundPlayer muziek = new SoundPlayer();
             playSound("sounds/lifeStrange.wav");

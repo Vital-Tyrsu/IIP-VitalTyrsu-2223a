@@ -2,12 +2,14 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfSequenceGame"
         mc:Ignorable="d"
         Title="score" Height="450" Width="800">
     <Grid>
-        <ListView x:Name="lstNames" d:ItemsSource="{d:SampleData ItemCount=5}" Margin="266,76,266,76">
+        <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Stretch="Fill"/>
+        <ListView x:Name="lstNames" Margin="205,75,205,75" FontFamily="hooge 05_54" FontSize="14" Background="#FFF19E37" Foreground="#FF000102" d:ItemsSource="{d:SampleData ItemCount=5}">
             <ListView.View>
                 <GridView>
                     <GridViewColumn/>

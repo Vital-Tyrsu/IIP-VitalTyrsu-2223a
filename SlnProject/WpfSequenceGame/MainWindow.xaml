@@ -11,7 +11,7 @@
 
     <Grid>
         <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Stretch="Fill"/>
-        <Button x:Name="btnPlay" Content="Play" Foreground="White" HorizontalAlignment="Left" Margin="140,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnPlay_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
+        <Button x:Name="btnPlay" Content="Play" Foreground="White" HorizontalAlignment="Left" Margin="140,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="BtnPlay_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
@@ -25,7 +25,7 @@
         </Button>
 
 
-        <Button x:Name="btnSeeScores" Foreground="White" Content="See Scores" HorizontalAlignment="Left" Margin="350,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnSeeScores_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
+        <Button x:Name="btnSeeScores" Foreground="White" Content="See Scores" HorizontalAlignment="Left" Margin="350,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="BtnSeeScores_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
@@ -39,7 +39,7 @@
         </Button>
 
 
-        <Button x:Name="btnStop" Content="Stop" Foreground="White" HorizontalAlignment="Left" Margin="550,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="btnStop_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
+        <Button x:Name="btnStop" Content="Stop" Foreground="White" HorizontalAlignment="Left" Margin="550,340,0,0" VerticalAlignment="Top" Height="50" Width="110" Click="BtnStop_Click" FontFamily="hooge 05_54" Background="#FFD1450A">
             <Button.Style>
                 <Style TargetType="Button">
                     <Setter Property="Cursor" Value="Hand"></Setter>
@@ -72,14 +72,14 @@
         <Label x:Name="lblAlertNaam"  HorizontalAlignment="Left" Margin="505,46,0,0" VerticalAlignment="Top" Width="285" FontFamily="hooge 05_54" Foreground="#FFECD6B9" Height="40" FontSize="10"/>
         <Label x:Name="lblAlertRound"  HorizontalAlignment="Left" Margin="450,111,0,0" VerticalAlignment="Top" Width="340" FontFamily="hooge 05_54" Foreground="#FFECD6B9" Height="50" FontSize="10"/>
 
-        <Button x:Name="btnUnmute" Content="Unmute" HorizontalAlignment="Left" Margin="720,380,0,0" VerticalAlignment="Top" Width="50" Click="btnUnmute_Click" Foreground="WhiteSmoke" Background="#FFD1450A">
+        <Button x:Name="btnUnmute" Content="Unmute" HorizontalAlignment="Left" Margin="720,380,0,0" VerticalAlignment="Top" Width="50" Click="BtnUnmute_Click" Foreground="WhiteSmoke" Background="#FFD1450A">
             <Button.Resources>
                 <Style TargetType="Border">
                     <Setter Property="CornerRadius" Value="7"></Setter>
                 </Style>
             </Button.Resources>
         </Button>
-        <Button x:Name="btnMute" Foreground="WhiteSmoke" Content="mute" HorizontalAlignment="Left" Margin="720,380,0,0" VerticalAlignment="Top" Width="50" Height="20" Click="btnMute_Click" Background="#FFD1450A">
+        <Button x:Name="btnMute" Foreground="WhiteSmoke" Content="mute" HorizontalAlignment="Left" Margin="720,380,0,0" VerticalAlignment="Top" Width="50" Height="20" Click="BtnMute_Click" Background="#FFD1450A">
 
             <Button.Resources>
                 <Style TargetType="Border">
