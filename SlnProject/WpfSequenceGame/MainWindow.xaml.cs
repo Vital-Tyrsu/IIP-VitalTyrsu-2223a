@@ -21,6 +21,7 @@ using System.IO;
 
 namespace WpfSequenceGame
 {
+    
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
@@ -31,19 +32,22 @@ namespace WpfSequenceGame
             InitializeComponent();
             playSound("sounds/lifeStrange.wav");
         }
-
+        
         Random random = new Random();
         List<int> pattern = new List<int>();
         int round = 1;
 
         private void btnPlay_Click(object sender, RoutedEventArgs e)
         {
+            
             if (!string.IsNullOrEmpty(TxtNaam.Text) && !string.IsNullOrEmpty(TxtRounds.Text))
             {
                 string naam = TxtNaam.Text;
                 int rounds = Convert.ToInt32(TxtRounds.Text);
                 game game = new game(naam, rounds);
                 game.Show();
+                playSound("sounds/correct.wav");
+                MessageBox.Show(MessageBoxImage()+"Voer je antwoord in aan de hand van de dieren die je hoort. Elk dier staat gelijk aan een getal (zie bovenrechts), deze sequentie voer je dan telkens in met behulp van een spatie. Veel Succes!");
                 this.Close(); // mainwindow sluiten
             }
             else

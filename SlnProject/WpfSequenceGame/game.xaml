@@ -8,7 +8,7 @@
         mc:Ignorable="d"
         Title="game" Height="450" Width="800">
     <Grid>
-        <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Width="800" Height="450"/>
+        <Image gif:ImageBehavior.AnimatedSource="/images/wpfBackground.gif" Stretch="Fill"/>
         <Label x:Name="lblRound" Content="Actual round: " HorizontalAlignment="Left" Margin="40,115,0,0" VerticalAlignment="Top" Width="235" Foreground="#FFECD6B9" FontSize="16" FontFamily="hooge 05_54" Height="30"/>
         <Label x:Name="lblNaam" Content="Welkom" HorizontalAlignment="Left" Margin="40,10,0,0" VerticalAlignment="Top" Width="540" FontSize="30" Foreground="#FFECD6B9" FontFamily="hooge 05_54"/>
         <Button x:Name="btnStart" Foreground="White" FontFamily="hooge 05_54" Content="Start" HorizontalAlignment="Left" Margin="665,300,0,0" VerticalAlignment="Top" Width="90" Height="35" Click="btnStart_Click" Background="#FFD1450A">
