@@ -72,8 +72,18 @@
         <Label x:Name="lblAntwoorden" Content="Label" HorizontalAlignment="Left" Margin="10,398,0,0" VerticalAlignment="Top" Width="220" Foreground="#FFECD6B9" Visibility="Hidden"/>
         <Label x:Name="lblCheck" Content="Voer je antwoord in" HorizontalAlignment="Left" Margin="370,175,0,0" VerticalAlignment="Top" Width="150" Foreground="#FFECD6B9" FontFamily="hooge 05_55"/>
         <Label x:Name="lblFout" HorizontalAlignment="Left" Margin="545,245,0,0" VerticalAlignment="Top" Width="190" FontFamily="hooge 05_55" Foreground="#FFECD6B9"/>
-        <Button x:Name="btnHoeSpelen" Content="Hoe spelen?" HorizontalAlignment="Left" Margin="261,374,0,0" VerticalAlignment="Top" Background="#FFD1450A" Foreground="White" Width="95" Height="20" Click="BtnHoeSpelen_Click" FontFamily="hooge 05_55"/>
-
-
+        <Button x:Name="btnHoeSpelen" Content="Hoe spelen?" HorizontalAlignment="Left" Margin="660,125,0,0" VerticalAlignment="Top" Background="#FFD1450A" Foreground="White" Width="95" Height="20" Click="BtnHoeSpelen_Click" FontFamily="hooge 05_55">
+            <Button.Style>
+                <Style TargetType="Button">
+                    <Setter Property="Cursor" Value="Hand"></Setter>
+                </Style>
+            </Button.Style>
+            <Button.Resources>
+                <Style TargetType="Border">
+                    <Setter Property="CornerRadius" Value="7"></Setter>
+                    <Setter Property="Opacity" Value="1"></Setter>
+                </Style>
+            </Button.Resources>
+        </Button>
     </Grid>
 </Window>

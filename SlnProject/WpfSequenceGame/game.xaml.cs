@@ -188,5 +188,22 @@ namespace WpfSequenceGame
         {
             MessageBox.Show("Voer je antwoord in aan de hand van de dieren die je hoort. Elk dier staat gelijk aan een getal (zie bovenrechts), deze sequentie voer je dan telkens in met behulp van een spatie. Veel Succes!");
         }
+
+
+        /*
+        private void TxtAnswer_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (!TxtAnswer.Text.Any(ch => char.IsDigit(ch)))
+            {
+                lblAntwoordGetal.Content = "Antwoord moet getal bevatten!";
+                btnAnswer.IsEnabled = false;
+            }
+            else
+            {
+                lblAntwoordGetal.Content = "";
+                btnAnswer.IsEnabled = true;
+            }
+        }
+        */
     }
 }
