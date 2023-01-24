@@ -1,0 +1,16 @@
+﻿<Window x:Class="WpfCopy.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfCopy"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Label Content="File in;" HorizontalAlignment="Left" Margin="147,157,0,0" VerticalAlignment="Top" Width="68"/>
+        <TextBox x:Name="txtFile" HorizontalAlignment="Left" Margin="196,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="285" Height="35"/>
+        <Button x:Name="ReadFileButton" Content="Kies..." HorizontalAlignment="Left" Margin="525,150,0,0" VerticalAlignment="Top" Height="33" Width="63" Click="ReadFileButton_Click"/>
+        <Button x:Name="WriteFileButton" Content="Go!" HorizontalAlignment="Left" Margin="471,217,0,0" VerticalAlignment="Top" Width="117" Height="42" Click="WriteFileButton_Click"/>
+
+    </Grid>
+</Window>
