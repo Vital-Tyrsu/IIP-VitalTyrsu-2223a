@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfFileInfo", "WpfFileInfo\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WpfCompare", "WpfCompare\WpfCompare.csproj", "{49AC8C91-7D77-4C00-82EA-E0A42D4C4439}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ConsoleCsv", "ConsoleCsv\ConsoleCsv.csproj", "{2FCFABF9-79A4-4F81-BF57-D80DBB113145}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{49AC8C91-7D77-4C00-82EA-E0A42D4C4439}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{49AC8C91-7D77-4C00-82EA-E0A42D4C4439}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{49AC8C91-7D77-4C00-82EA-E0A42D4C4439}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2FCFABF9-79A4-4F81-BF57-D80DBB113145}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2FCFABF9-79A4-4F81-BF57-D80DBB113145}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2FCFABF9-79A4-4F81-BF57-D80DBB113145}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2FCFABF9-79A4-4F81-BF57-D80DBB113145}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
